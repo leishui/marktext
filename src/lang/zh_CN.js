@@ -67,6 +67,21 @@ export default {
         FILE_CLOSE_WINDOW: '关闭窗口',
         FILE_QUIT: '退出'
       },
+      format: {
+        FORMAT: '格式',
+        FORMAT_BOLD: '加粗',
+        FORMAT_ITALIC: '斜体',
+        FORMAT_UNDERLINE: '下划线',
+        FORMAT_SUPERSCRIPT: 'Superscript',
+        FORMAT_SUBSCRIPT: 'Subscript',
+        FORMAT_HIGHLIGHT: '高亮',
+        FORMAT_INLINE_CODE: '行内代码',
+        FORMAT_INLINE_MATH: '行内公式',
+        FORMAT_STRIKETHROUGH: 'Strikethrough',
+        FORMAT_HYPERLINK: '超链接',
+        FORMAT_IMAGE: '图片',
+        FORMAT_CLEAR_FORMAT: '清除格式'
+      },
       marktext: {
         MARKTEXT_ABOUT: '关于 MarkText',
         MARKTEXT_CHECK_FOR_UPDATES: '检查更新',

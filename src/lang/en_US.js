@@ -63,6 +63,21 @@ export default {
         FILE_CLOSE_WINDOW: 'Close Window',
         FILE_QUIT: 'Quit'
       },
+      format: {
+        FORMAT: 'F&ormat',
+        FORMAT_BOLD: 'Bold',
+        FORMAT_ITALIC: 'Italic',
+        FORMAT_UNDERLINE: 'Underline',
+        FORMAT_SUPERSCRIPT: 'Superscript',
+        FORMAT_SUBSCRIPT: 'Subscript',
+        FORMAT_HIGHLIGHT: 'Highlight',
+        FORMAT_INLINE_CODE: 'Inline Code',
+        FORMAT_INLINE_MATH: 'Inline Math',
+        FORMAT_STRIKETHROUGH: 'Strikethrough',
+        FORMAT_HYPERLINK: 'Hyperlink',
+        FORMAT_IMAGE: 'Image',
+        FORMAT_CLEAR_FORMAT: 'Clear Formatting'
+      },
       marktext: {
         MARKTEXT_ABOUT: 'About MarkText',
         MARKTEXT_CHECK_FOR_UPDATES: 'Check for updates...',
