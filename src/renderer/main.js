@@ -8,6 +8,7 @@ import locale from 'element-ui/lib/locale'
 import axios from './axios'
 import store from './store'
 import './assets/symbolIcon'
+import VueI18n from 'vue-i18n'
 import {
   Dialog,
   Form,
@@ -40,6 +41,7 @@ import { addElementStyle } from '@/util/theme'
 
 import './assets/styles/index.css'
 import './assets/styles/printService.css'
+import { i18n } from '../lang'
 
 // -----------------------------------------------
 
@@ -85,6 +87,7 @@ Vue.use(TableColumn)
 Vue.use(Tabs)
 Vue.use(TabPane)
 Vue.use(Input)
+Vue.use(VueI18n)
 
 Vue.use(VueRouter)
 
@@ -102,7 +105,10 @@ const router = new VueRouter({
 
 /* eslint-disable no-new */
 new Vue({
+  i18n,
   store,
   router,
   template: '<router-view class="view"></router-view>'
 }).$mount('#app')
+
+// export { i18n }
