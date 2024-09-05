@@ -23,7 +23,7 @@ export default {
         OPEN: 'Open...'
       },
       edit: {
-        EDIT: '&编辑',
+        EDIT: '编辑',
         EDIT_UNDO: '撤销',
         EDIT_REDO: '重做',
         EDIT_CUT: '剪切',
@@ -47,7 +47,7 @@ export default {
         EDIT_LINE_ENCODING_LF: '换行符 (LF)'
       },
       file: {
-        FILE: '&文件',
+        FILE: '文件',
         FILE_NEW_TAB: '新建标签页',
         FILE_NEW_WINDOW: '新建窗口',
         FILE_OPEN_FILE: '打开文件',
@@ -82,6 +82,22 @@ export default {
         FORMAT_IMAGE: '图片',
         FORMAT_CLEAR_FORMAT: '清除格式'
       },
+      help: {
+        HELP: '帮助',
+        HELP_QUICK_START: '快速上手',
+        HELP_MARKDOWN_REFERENCE: 'Markdown 参考',
+        HELP_CHANGE_LOG: '版本更新记录',
+        HELP_DONATE_VIA_OPEN_COLLECTIVE: '通过 Open Collective 捐赠',
+        HELP_FEEDBACK_VIA_TWITTER: '通过 Twitter 反馈',
+        HELP_REPORT_ISSUE_OR_REQUEST_FEATURE: '报告问题、申请新功能',
+        HELP_WEBSITE: '官网',
+        HELP_WATCH_ON_GITHUB: 'Watch on GitHub...',
+        HELP_FOLLOW_US_ON_GITHUB: 'Follow us on Github...',
+        HELP_FOLLOW_US_ON_TWITTER: 'Follow us on Twitter...',
+        HELP_LICENSE: '证书',
+        HELP_CHECK_FOR_UPDATES: '检查更新',
+        HELP_ABOUT: '关于 MarkText...'
+      },
       marktext: {
         MARKTEXT_ABOUT: '关于 MarkText',
         MARKTEXT_CHECK_FOR_UPDATES: '检查更新',
@@ -91,6 +107,54 @@ export default {
         MARKTEXT_HIDE_OTHERS: '隐藏其他窗口',
         MARKTEXT_SHOW_ALL: '展示所有窗口',
         MARKTEXT_QUIT: '退出 MarkText'
+      },
+      paragraph: {
+        PARAGRAPH: '段落',
+        PARAGRAPH_HEADING_1: '一级标题',
+        PARAGRAPH_HEADING_2: '二级标题',
+        PARAGRAPH_HEADING_3: '三级标题',
+        PARAGRAPH_HEADING_4: '四级标题',
+        PARAGRAPH_HEADING_5: '五级标题',
+        PARAGRAPH_HEADING_6: '六级标题',
+        PARAGRAPH_PROMOTE_HEADING: '提升标题',
+        PARAGRAPH_DEMOTE_HEADING: '降级标题',
+        PARAGRAPH_TABLE: '表格',
+        PARAGRAPH_CODE_FENCE: '代码块',
+        PARAGRAPH_QUOTE_BLOCK: '引用块',
+        PARAGRAPH_MATH_BLOCK: '数学公式块',
+        PARAGRAPH_HTML_BLOCK: 'Html 块',
+        PARAGRAPH_ORDERED_LIST: '有序列表',
+        PARAGRAPH_BULLET_LIST: '无序列表',
+        PARAGRAPH_TASK_LIST: '任务列表',
+        PARAGRAPH_LOOSE_LIST_ITEM: '松散列表项',
+        PARAGRAPH_PARAGRAPH: '段落',
+        PARAGRAPH_HORIZONTAL_RULE: '水平线',
+        PARAGRAPH_FRONT_MATTER: '前言'
+      },
+      theme: {
+        THEME: '主题'
+      },
+      view: {
+        VIEW: '视图',
+        VIEW_COMMAND_PALETTE: '命令面板',
+        VIEW_SOURCE_CODE_MODE: '源代码模式',
+        VIEW_TYPEWRITER_MODE: '打字机模式',
+        VIEW_FOCUS_MODE: '专注模式',
+        VIEW_SHOW_SIDEBAR: '显示侧边栏',
+        VIEW_SHOW_TAB_BAR: '显示选项卡栏',
+        VIEW_TOGGLE_TABLE_OF_CONTENT: '显示大纲',
+        VIEW_RELOAD_IMAGES: '重新加载图片',
+        VIEW_SHOW_DEVELOPER_TOOLS: '打开开发者工具',
+        VIEW_RELOAD_WINDOW: '重新加载窗口'
+      },
+      window: {
+        WINDOW: '窗口',
+        WINDOW_MINIMIZE: '最小化',
+        WINDOW_ALWAYS_ON_TOP: '窗口置顶',
+        WINDOW_ZOOM_IN: '放大',
+        WINDOW_ZOOM_OUT: '缩小',
+        WINDOW_SHOW_IN_FULL_SCREEN: '全屏模式',
+        WINDOW_BRING_ALL_TO_FRONT: '显示所有窗口'
       }
     }
   }
