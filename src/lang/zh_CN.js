@@ -157,5 +157,11 @@ export default {
         WINDOW_BRING_ALL_TO_FRONT: '显示所有窗口'
       }
     }
+  },
+  prefComponents: {
+    general: {
+      GENERAL: '通用设置',
+      USER_INTERFACE_LANGUAGE: '界面语言'
+    }
   }
 }

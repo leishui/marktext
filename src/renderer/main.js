@@ -110,5 +110,3 @@ new Vue({
   router,
   template: '<router-view class="view"></router-view>'
 }).$mount('#app')
-
-// export { i18n }

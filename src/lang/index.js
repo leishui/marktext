@@ -1,5 +1,14 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
+import Store from 'electron-store'
+import schema from '../main/preferences/schema.json'
+
+const store = new Store({ schema, name: 'preferences' })
+
+// 获取用户偏好的语言，如果没有则默认 'en'
+const savedLanguage = store.get('language', 'en_US')
+
+console.log(store.store)
 
 Vue.use(VueI18n)
 
@@ -12,9 +21,9 @@ files.keys().forEach((key) => {
   langOptions[optionKey] = files(key).default
 })
 
-console.log(langOptions)
+// console.log(langOptions)
 export const i18n = new VueI18n({
-  locale: 'zh_CN', // 设置地区
+  locale: savedLanguage, // 设置地区
   fallbackLocale: 'en_US',
   messages: langOptions // 设置地区信息
 })

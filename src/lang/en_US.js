@@ -1,5 +1,4 @@
 export default {
-
   // 页面字段
   contextMenu: {
     editor: {
@@ -152,6 +151,12 @@ export default {
         WINDOW_SHOW_IN_FULL_SCREEN: 'Show in Full Screen',
         WINDOW_BRING_ALL_TO_FRONT: 'Bring All to Front'
       }
+    }
+  },
+  prefComponents: {
+    general: {
+      GENERAL: 'General',
+      USER_INTERFACE_LANGUAGE: 'User interface language'
     }
   }
 }

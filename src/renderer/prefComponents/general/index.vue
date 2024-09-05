@@ -1,6 +1,6 @@
 <template>
   <div class="pref-general">
-    <h4>General</h4>
+    <h4>{{ $t('prefComponents.general.GENERAL') }}</h4>
     <compound>
       <template #head>
         <h6 class="title">Auto Save:</h6>
@@ -107,11 +107,11 @@
       </template>
       <template #children>
         <cur-select
-          description="User interface language"
+          :description="$t('prefComponents.general.USER_INTERFACE_LANGUAGE')"
           :value="language"
           :options="languageOptions"
           :onChange="value => onSelectChange('language', value)"
-          :disable="true"
+          :disable="false"
         ></cur-select>
       </template>
     </compound>
