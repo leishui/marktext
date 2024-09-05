@@ -3,7 +3,7 @@ import { shell } from 'electron'
 import { isFile } from 'common/filesystem'
 import * as actions from '../actions/help'
 import { checkUpdates } from '../actions/marktext'
-import { i18n } from '../../../lang';
+import { i18n } from '../../../lang'
 
 /// Check whether the package is updatable at runtime.
 const isUpdatable = () => {
