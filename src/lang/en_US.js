@@ -1,8 +1,3 @@
-/**
- * zh_CN.js 中文语言包
- * 由于部分语言带有单引号，所有多语言的翻译统一使用双引号
- */
-
 export default {
 
   // 页面字段
@@ -46,6 +41,37 @@ export default {
         EDIT_LINE_ENCODING: 'Line Ending',
         EDIT_LINE_ENCODING_CRLF: 'Carriage return and line feed (CRLF)',
         EDIT_LINE_ENCODING_LF: 'Line feed (LF)'
+      },
+      file: {
+        FILE: '&File',
+        FILE_NEW_TAB: 'New Tab',
+        FILE_NEW_WINDOW: 'New Window',
+        FILE_OPEN_FILE: 'Open File...',
+        FILE_OPEN_FOLDER: 'Open Folder...',
+        FILE_OPEN_RECENT: 'Open Recent',
+        FILE_CLEAR_RECENTLY_USED: 'Clear Recently Used',
+        FILE_SAVE: 'Save',
+        FILE_SAVE_AS: 'Save As...',
+        FILE_AUTO_SAVE: 'Auto Save',
+        FILE_MOVE_TO: 'Move To...',
+        FILE_RENAME: 'Rename...',
+        FILE_IMPORT: 'Import...',
+        FILE_EXPORT: 'Export',
+        FILE_PRINT: 'Print',
+        FILE_PREFERENCES: 'Preferences...',
+        FILE_CLOSE_TAB: 'Close Tab',
+        FILE_CLOSE_WINDOW: 'Close Window',
+        FILE_QUIT: 'Quit'
+      },
+      marktext: {
+        MARKTEXT_ABOUT: 'About MarkText',
+        MARKTEXT_CHECK_FOR_UPDATES: 'Check for updates...',
+        MARKTEXT_PREFERENCES: 'Preferences',
+        MARKTEXT_SERVICES: 'Services',
+        MARKTEXT_HIDE: 'Hide MarkText',
+        MARKTEXT_HIDE_OTHERS: 'Hide Others',
+        MARKTEXT_SHOW_ALL: 'Show All',
+        MARKTEXT_QUIT: 'Quit MarkText'
       }
     }
   }

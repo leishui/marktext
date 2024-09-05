@@ -1,6 +1,7 @@
 import { app } from 'electron'
 import { showAboutDialog } from '../actions/help'
 import * as actions from '../actions/marktext'
+import { i18n } from '../../../lang'
 
 // macOS only menu.
 
@@ -8,17 +9,17 @@ export default function (keybindings) {
   return {
     label: 'MarkText',
     submenu: [{
-      label: 'About MarkText',
+      label: i18n.t('menu.templates.marktext.MARKTEXT_ABOUT'),
       click (menuItem, focusedWindow) {
         showAboutDialog(focusedWindow)
       }
     }, {
-      label: 'Check for updates...',
+      label: i18n.t('menu.templates.marktext.MARKTEXT_CHECK_FOR_UPDATES'),
       click (menuItem, focusedWindow) {
         actions.checkUpdates(focusedWindow)
       }
     }, {
-      label: 'Preferences',
+      label: i18n.t('menu.templates.marktext.MARKTEXT_PREFERENCES'),
       accelerator: keybindings.getAccelerator('file.preferences'),
       click () {
         actions.userSetting()
@@ -26,32 +27,32 @@ export default function (keybindings) {
     }, {
       type: 'separator'
     }, {
-      label: 'Services',
+      label: i18n.t('menu.templates.marktext.MARKTEXT_SERVICES'),
       role: 'services',
       submenu: []
     }, {
       type: 'separator'
     }, {
-      label: 'Hide MarkText',
+      label: i18n.t('menu.templates.marktext.MARKTEXT_HIDE'),
       accelerator: keybindings.getAccelerator('mt.hide'),
       click () {
         actions.osxHide()
       }
     }, {
-      label: 'Hide Others',
+      label: i18n.t('menu.templates.marktext.MARKTEXT_HIDE_OTHERS'),
       accelerator: keybindings.getAccelerator('mt.hide-others'),
       click () {
         actions.osxHideAll()
       }
     }, {
-      label: 'Show All',
+      label: i18n.t('menu.templates.marktext.MARKTEXT_SHOW_ALL'),
       click () {
         actions.osxShowAll()
       }
     }, {
       type: 'separator'
     }, {
-      label: 'Quit MarkText',
+      label: i18n.t('menu.templates.marktext.MARKTEXT_QUIT'),
       accelerator: keybindings.getAccelerator('file.quit'),
       click: app.quit
     }]

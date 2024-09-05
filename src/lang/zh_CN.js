@@ -1,6 +1,5 @@
 /**
  * zh_CN.js 中文语言包
- * 由于部分语言带有单引号，所有多语言的翻译统一使用双引号
  */
 
 export default {
@@ -46,6 +45,37 @@ export default {
         EDIT_LINE_ENCODING: '行结束符',
         EDIT_LINE_ENCODING_CRLF: '回车符加换行符 (CRLF)',
         EDIT_LINE_ENCODING_LF: '换行符 (LF)'
+      },
+      file: {
+        FILE: '&文件',
+        FILE_NEW_TAB: '新建标签页',
+        FILE_NEW_WINDOW: '新建窗口',
+        FILE_OPEN_FILE: '打开文件',
+        FILE_OPEN_FOLDER: '打开文件夹',
+        FILE_OPEN_RECENT: '打开最近文件',
+        FILE_CLEAR_RECENTLY_USED: '清除最近使用',
+        FILE_SAVE: '保存',
+        FILE_SAVE_AS: '另存为',
+        FILE_AUTO_SAVE: '自动保存',
+        FILE_MOVE_TO: '移动到...',
+        FILE_RENAME: '重命名',
+        FILE_IMPORT: '导入',
+        FILE_EXPORT: '导出',
+        FILE_PRINT: '打印',
+        FILE_PREFERENCES: '偏好设置',
+        FILE_CLOSE_TAB: '关闭标签页',
+        FILE_CLOSE_WINDOW: '关闭窗口',
+        FILE_QUIT: '退出'
+      },
+      marktext: {
+        MARKTEXT_ABOUT: '关于 MarkText',
+        MARKTEXT_CHECK_FOR_UPDATES: '检查更新',
+        MARKTEXT_PREFERENCES: '偏好设置',
+        MARKTEXT_SERVICES: '服务',
+        MARKTEXT_HIDE: '隐藏 MarkText',
+        MARKTEXT_HIDE_OTHERS: '隐藏其他窗口',
+        MARKTEXT_SHOW_ALL: '展示所有窗口',
+        MARKTEXT_QUIT: '退出 MarkText'
       }
     }
   }
