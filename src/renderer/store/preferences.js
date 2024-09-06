@@ -1,6 +1,6 @@
 import { ipcRenderer } from 'electron'
 import bus from '../bus'
-// import { i18n } from '../../lang'
+import { i18n } from '../../lang'
 
 // user preference
 const state = {
@@ -15,7 +15,7 @@ const state = {
   fileSortBy: 'created',
   startUpAction: 'lastState',
   defaultDirectoryToOpen: '',
-  language: 'en',
+  language: 'en_US',
 
   editorFontFamily: 'Open Sans',
   fontSize: 16,
@@ -101,19 +101,14 @@ const getters = {}
 
 const mutations = {
   SET_USER_PREFERENCE (state, preference) {
+    if (preference.language) {
+      i18n.locale = preference.language
+    }
     Object.keys(preference).forEach(key => {
       if (typeof preference[key] !== 'undefined' && typeof state[key] !== 'undefined') {
         state[key] = preference[key]
       }
     })
-  },
-  SET_LANGUAGE (state, language) {
-    if (language) {
-      console.log('hh', language)
-      state.language = language
-      // i18n.locale = language
-    }
-    // console.log(preference)
   },
   SET_MODE (state, { type, checked }) {
     state[type] = checked
@@ -130,9 +125,6 @@ const actions = {
 
     ipcRenderer.on('mt::user-preference', (e, preferences) => {
       commit('SET_USER_PREFERENCE', preferences)
-    })
-    ipcRenderer.on('mt::language-changed', (e, preferences) => {
-      commit('SET_LANGUAGE', preferences)
     })
   },
 

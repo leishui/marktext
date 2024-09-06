@@ -9,6 +9,7 @@ import { updateFormatMenu } from '../menu/actions/format'
 import { updateSelectionMenus } from '../menu/actions/paragraph'
 import { viewLayoutChanged } from '../menu/actions/view'
 import configureMenu, { configSettingMenu } from '../menu/templates'
+import { i18n } from '../../lang'
 
 const RECENTLY_USED_DOCUMENTS_FILE_NAME = 'recently-used-documents.json'
 const MAX_RECENTLY_USED_DOCUMENTS = 12
@@ -265,6 +266,27 @@ class AppMenu {
   }
 
   /**
+   * Refresh all window menus.
+   *
+   * NOTE: We need this method to add or remove menu items at runtime.
+   */
+  refreshAppMenu () {
+    // rebuild all window menus
+    this.windowMenus.forEach((value, key) => {
+      const { type } = value
+      if (type === MenuType.SETTINGS) {
+        const { menu: newMenu } = this._buildSettingMenu()
+        value.menu = newMenu
+        this._setApplicationMenu(newMenu)
+      }
+      if (type === MenuType.EDITOR) {
+        const { menu: newMenu } = this._buildEditorMenu(this.getRecentlyUsedDocuments())
+        value.menu = newMenu
+      }
+    })
+  }
+
+  /**
    * Update line ending menu items.
    *
    * @param {number} windowId The window id.
@@ -414,6 +436,10 @@ class AppMenu {
       }
       if (prefs.autoSave !== undefined) {
         this.updateAutoSaveMenu(prefs.autoSave)
+      }
+      if (prefs.language) {
+        i18n.locale = prefs.language
+        this.refreshAppMenu()
       }
     })
   }

@@ -17,7 +17,7 @@ import { watchers } from '../utils/imagePathAutoComplement'
 import { WindowType } from '../windows/base'
 import EditorWindow from '../windows/editor'
 import SettingWindow from '../windows/setting'
-// import { i18n } from '../../lang'
+import { i18n } from '../../lang'
 
 class App {
   /**
@@ -143,8 +143,12 @@ class App {
       startUpAction,
       defaultDirectoryToOpen,
       autoSwitchTheme,
-      theme
+      theme,
+      language
     } = preferences.getAll()
+
+    // init UI language
+    i18n.locale = language
 
     if (startUpAction === 'folder' && defaultDirectoryToOpen) {
       const info = normalizeMarkdownPath(defaultDirectoryToOpen)
@@ -174,13 +178,6 @@ class App {
           // Need to set dark or light theme because we set `system` to get the current system theme.
           nativeTheme.themeSource = isDarkMode ? 'dark' : 'light'
         }
-      }
-      if (change.language) {
-        this._windowManager.windows.forEach(win => {
-          // console.log(win.browserWindow)
-          win.browserWindow.webContents.send('mt::language-changed', change.language)
-          win.browserWindow.reload()
-        })
       }
     })
 
@@ -572,14 +569,6 @@ class App {
       const { keybindings } = this._accessor
       keybindings.openConfigInFileManager()
     })
-
-    // ipcMain.on('mt::set-language', (e, language) => {
-    //   const win = BrowserWindow.fromWebContents(e.sender)
-    //   // 将语言设置为本地存储中，便于重启时记住用户选择
-    //   win.webContents.send('mt::language-changed', language)
-    //   // 重新加载窗口以应用新的语言
-    //   win.reload()
-    // })
 
     ipcMain.handle('mt::keybinding-get-pref-keybindings', () => {
       const { keybindings } = this._accessor
