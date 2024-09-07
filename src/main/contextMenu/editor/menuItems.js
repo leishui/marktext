@@ -58,3 +58,7 @@ export function buildMenuItems () {
     }
   }
 }
+
+export const SEPARATOR = {
+  type: 'separator'
+}
