@@ -1,18 +1,6 @@
 import { Menu, MenuItem } from 'electron'
-import {
-  CUT,
-  COPY,
-  PASTE,
-  COPY_AS_MARKDOWN,
-  COPY_AS_HTML,
-  PASTE_AS_PLAIN_TEXT,
-  SEPARATOR,
-  INSERT_BEFORE,
-  INSERT_AFTER
-} from './menuItems'
+import { buildMenuItems } from './menuItems'
 import spellcheckMenuBuilder from './spellcheck'
-
-const CONTEXT_ITEMS = [INSERT_BEFORE, INSERT_AFTER, SEPARATOR, CUT, COPY, PASTE, SEPARATOR, COPY_AS_MARKDOWN, COPY_AS_HTML, PASTE_AS_PLAIN_TEXT]
 
 const isInsideEditor = params => {
   const { isEditable, editFlags, inputFieldType } = params
@@ -21,6 +9,9 @@ const isInsideEditor = params => {
 }
 
 export const showEditorContextMenu = (win, event, params, isSpellcheckerEnabled) => {
+  const CONTEXT_ITEMS = buildMenuItems()
+  const { INSERT_BEFORE, INSERT_AFTER, CUT, COPY, PASTE, PASTE_AS_PLAIN_TEXT, SEPARATOR, COPY_AS_MARKDOWN, COPY_AS_HTML } = CONTEXT_ITEMS
+
   const { isEditable, hasImageContents, selectionText, editFlags, misspelledWord, dictionarySuggestions } = params
 
   // NOTE: We have to get the word suggestions from this event because `webFrame.getWordSuggestions` and
@@ -45,8 +36,9 @@ export const showEditorContextMenu = (win, event, params, isSpellcheckerEnabled)
 
     [CUT, COPY, COPY_AS_HTML, COPY_AS_MARKDOWN].forEach(item => {
       item.enabled = canCopy
-    })
-    CONTEXT_ITEMS.forEach(item => {
+    });
+
+    [INSERT_BEFORE, INSERT_AFTER, SEPARATOR, CUT, COPY, PASTE, SEPARATOR, COPY_AS_MARKDOWN, COPY_AS_HTML, PASTE_AS_PLAIN_TEXT].forEach(item => {
       menu.append(new MenuItem(item))
     })
     menu.popup([{ window: win, x: event.clientX, y: event.clientY }])
