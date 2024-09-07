@@ -180,6 +180,17 @@ export default {
       OPEN_A_BLANK_PAGE: '打开空页面',
       MISC: '杂项:',
       USER_INTERFACE_LANGUAGE_DES: '界面语言'
+    },
+    sideBar: {
+      PREFERENCES: '偏好设置',
+      SEARCH_PREFERENCES: '搜索设置',
+      GENERAL: '通用设置',
+      EDITOR: '编辑器',
+      MARKDOWN: 'Markdown',
+      SPELLING: '拼写检查',
+      THEME: '主题',
+      IMAGE: '图片',
+      KEY_BINDING: '快捷键'
     }
   }
 }

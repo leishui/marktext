@@ -175,6 +175,17 @@ export default {
       OPEN_A_BLANK_PAGE: 'Open a blank page',
       MISC: 'Misc:',
       USER_INTERFACE_LANGUAGE_DES: 'User interface language'
+    },
+    sideBar: {
+      PREFERENCES: 'Preferences',
+      SEARCH_PREFERENCES: 'Search preferences',
+      GENERAL: 'General',
+      EDITOR: 'Editor',
+      MARKDOWN: 'Markdown',
+      SPELLING: 'Spelling',
+      THEME: 'Theme',
+      IMAGE: 'Image',
+      KEY_BINDING: 'Key Bindings'
     }
   }
 }

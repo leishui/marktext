@@ -1,12 +1,12 @@
 <template>
   <div class="pref-sidebar">
-    <h3 class="title">Preferences</h3>
+    <h3 class="title">{{ $t('prefComponents.sideBar.PREFERENCES') }}</h3>
     <section class="search-wrapper">
       <el-autocomplete
         popper-class="pref-autocomplete"
         v-model="state"
         :fetch-suggestions="querySearch"
-        placeholder="Search preferences"
+        :placeholder="$t('prefComponents.sideBar.SEARCH_PREFERENCES')"
         :trigger-on-focus="false"
         @select="handleSelect">
         <i
@@ -35,11 +35,12 @@
 </template>
 <script>
 import { ipcRenderer } from 'electron'
-import { category, searchContent } from './config'
+import { getCategory, searchContent } from './config'
+import { i18n } from '../../../lang'
 
 export default {
   data () {
-    this.category = category
+    this.category = getCategory()
     return {
       currentCategory: 'general',
       restaurants: [],
@@ -98,6 +99,12 @@ export default {
       this.currentCategory = this.$route.name
     }
     ipcRenderer.on('settings::change-tab', this.onIpcCategoryChange)
+    ipcRenderer.on('mt::user-preference', (e, preferences) => {
+      if (preferences.language) {
+        i18n.locale = preferences.language
+        this.category = getCategory()
+      }
+    })
   },
   unmounted () {
     ipcRenderer.removeAllListener('settings::change-tab', this.onIpcCategoryChange)
