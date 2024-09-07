@@ -21,6 +21,7 @@ import plantumlIcon from '../../assets/pngicon/plantuml/2.png'
 import mermaidIcon from '../../assets/pngicon/mermaid/2.png'
 import vegaIcon from '../../assets/pngicon/chart/2.png'
 import { isOsx } from '../../config'
+import { i18n } from '../../../../lang'
 
 const COMMAND_KEY = isOsx ? '⌘' : 'Ctrl'
 const OPTION_KEY = isOsx ? '⌥' : 'Alt'
@@ -33,137 +34,139 @@ const SHIFT_KEY = isOsx ? '⇧' : 'Shift'
 // Caps Lock ⇪
 // Fn
 
-export const quickInsertObj = {
-  'basic block': [{
-    title: 'Paragraph',
-    subTitle: 'Lorem Ipsum is simply dummy text',
-    label: 'paragraph',
-    shortCut: `${COMMAND_KEY}+0`,
-    icon: paragraphIcon
-  }, {
-    title: 'Horizontal Line',
-    subTitle: '---',
-    label: 'hr',
-    shortCut: `${OPTION_KEY}+${COMMAND_KEY}+-`,
-    icon: hrIcon
-  }, {
-    title: 'Front Matter',
-    subTitle: '--- Lorem Ipsum ---',
-    label: 'front-matter',
-    shortCut: `${OPTION_KEY}+${COMMAND_KEY}+Y`,
-    icon: frontMatterIcon
-  }],
-  header: [{
-    title: 'Header 1',
-    subTitle: '# Lorem Ipsum is simply ...',
-    label: 'heading 1',
-    shortCut: `${COMMAND_KEY}+1`,
-    icon: header1Icon
-  }, {
-    title: 'Header 2',
-    subTitle: '## Lorem Ipsum is simply ...',
-    label: 'heading 2',
-    shortCut: `${COMMAND_KEY}+2`,
-    icon: header2Icon
-  }, {
-    title: 'Header 3',
-    subTitle: '### Lorem Ipsum is simply ...',
-    label: 'heading 3',
-    shortCut: `${COMMAND_KEY}+3`,
-    icon: header3Icon
-  }, {
-    title: 'Header 4',
-    subTitle: '#### Lorem Ipsum is simply ...',
-    label: 'heading 4',
-    shortCut: `${COMMAND_KEY}+4`,
-    icon: header4Icon
-  }, {
-    title: 'Header 5',
-    subTitle: '##### Lorem Ipsum is simply ...',
-    label: 'heading 5',
-    shortCut: `${COMMAND_KEY}+5`,
-    icon: header5Icon
-  }, {
-    title: 'Header 6',
-    subTitle: '###### Lorem Ipsum is simply ...',
-    label: 'heading 6',
-    shortCut: `${COMMAND_KEY}+6`,
-    icon: header6Icon
-  }],
-  'advanced block': [{
-    title: 'Table Block',
-    subTitle: '|Lorem | Ipsum is simply |',
-    label: 'table',
-    shortCut: `${SHIFT_KEY}+${COMMAND_KEY}+T`,
-    icon: newTableIcon
-  }, {
-    title: 'Display Math',
-    subTitle: '$$ Lorem Ipsum is simply $$',
-    label: 'mathblock',
-    shortCut: `${OPTION_KEY}+${COMMAND_KEY}+M`,
-    icon: mathblockIcon
-  }, {
-    title: 'HTML Block',
-    subTitle: '<div> Lorem Ipsum is simply </div>',
-    label: 'html',
-    shortCut: `${OPTION_KEY}+${COMMAND_KEY}+J`,
-    icon: htmlIcon
-  }, {
-    title: 'Code Block',
-    subTitle: '```java Lorem Ipsum is simply ```',
-    label: 'pre',
-    shortCut: `${OPTION_KEY}+${COMMAND_KEY}+C`,
-    icon: codeIcon
-  }, {
-    title: 'Quote Block',
-    subTitle: '>Lorem Ipsum is simply ...',
-    label: 'blockquote',
-    shortCut: `${OPTION_KEY}+${COMMAND_KEY}+Q`,
-    icon: quoteIcon
-  }],
-  'list block': [{
-    title: 'Order List',
-    subTitle: '1. Lorem Ipsum is simply ...',
-    label: 'ol-order',
-    shortCut: `${OPTION_KEY}+${COMMAND_KEY}+O`,
-    icon: orderListIcon
-  }, {
-    title: 'Bullet List',
-    subTitle: '- Lorem Ipsum is simply ...',
-    label: 'ul-bullet',
-    shortCut: `${OPTION_KEY}+${COMMAND_KEY}+U`,
-    icon: bulletListIcon
-  }, {
-    title: 'To-do List',
-    subTitle: '- [x] Lorem Ipsum is simply ...',
-    label: 'ul-task',
-    shortCut: `${OPTION_KEY}+${COMMAND_KEY}+X`,
-    icon: todoListIcon
-  }],
-  diagram: [{
-    title: 'Vega Chart',
-    subTitle: 'Render flow chart by vega-lite.js.',
-    label: 'vega-lite',
-    icon: vegaIcon
-  }, {
-    title: 'Flow Chart',
-    subTitle: 'Render flow chart by flowchart.js.',
-    label: 'flowchart',
-    icon: flowchartIcon
-  }, {
-    title: 'Sequence Diagram',
-    subTitle: 'Render sequence diagram by js-sequence.',
-    label: 'sequence',
-    icon: sequenceIcon
-  }, {
-    title: 'PlantUML Diagram',
-    subTitle: 'Render PlantUML diagrams',
-    label: 'plantuml',
-    icon: plantumlIcon
-  }, {
-    title: 'Mermaid',
-    subTitle: 'Render Diagram by mermaid.',
-    label: 'mermaid',
-    icon: mermaidIcon
-  }]
+export function getQuickInsertObj () {
+  return {
+    'basic block': [{
+      title: i18n.t('muya.ui.quickInsert.PARAGRAPH'),
+      subTitle: i18n.t('muya.ui.quickInsert.PARAGRAPH_SUB'),
+      label: 'paragraph',
+      shortCut: `${COMMAND_KEY}+0`,
+      icon: paragraphIcon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.HORIZONTAL_LINE'),
+      subTitle: i18n.t('muya.ui.quickInsert.HORIZONTAL_LINE_SUB'),
+      label: 'hr',
+      shortCut: `${OPTION_KEY}+${COMMAND_KEY}+-`,
+      icon: hrIcon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.FRONT_MATTER'),
+      subTitle: i18n.t('muya.ui.quickInsert.FRONT_MATTER_SUB'),
+      label: 'front-matter',
+      shortCut: `${OPTION_KEY}+${COMMAND_KEY}+Y`,
+      icon: frontMatterIcon
+    }],
+    header: [{
+      title: i18n.t('muya.ui.quickInsert.HEADER_1'),
+      subTitle: i18n.t('muya.ui.quickInsert.HEADER_1_SUB'),
+      label: 'heading 1',
+      shortCut: `${COMMAND_KEY}+1`,
+      icon: header1Icon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.HEADER_2'),
+      subTitle: i18n.t('muya.ui.quickInsert.HEADER_2_SUB'),
+      label: 'heading 2',
+      shortCut: `${COMMAND_KEY}+2`,
+      icon: header2Icon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.HEADER_3'),
+      subTitle: i18n.t('muya.ui.quickInsert.HEADER_3_SUB'),
+      label: 'heading 3',
+      shortCut: `${COMMAND_KEY}+3`,
+      icon: header3Icon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.HEADER_4'),
+      subTitle: i18n.t('muya.ui.quickInsert.HEADER_4_SUB'),
+      label: 'heading 4',
+      shortCut: `${COMMAND_KEY}+4`,
+      icon: header4Icon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.HEADER_5'),
+      subTitle: i18n.t('muya.ui.quickInsert.HEADER_5_SUB'),
+      label: 'heading 5',
+      shortCut: `${COMMAND_KEY}+5`,
+      icon: header5Icon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.HEADER_6'),
+      subTitle: i18n.t('muya.ui.quickInsert.HEADER_6_SUB'),
+      label: 'heading 6',
+      shortCut: `${COMMAND_KEY}+6`,
+      icon: header6Icon
+    }],
+    'advanced block': [{
+      title: i18n.t('muya.ui.quickInsert.TABLE_BLOCK'),
+      subTitle: i18n.t('muya.ui.quickInsert.TABLE_BLOCK_SUB'),
+      label: 'table',
+      shortCut: `${SHIFT_KEY}+${COMMAND_KEY}+T`,
+      icon: newTableIcon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.DISPLAY_MATH'),
+      subTitle: i18n.t('muya.ui.quickInsert.DISPLAY_MATH_SUB'),
+      label: 'mathblock',
+      shortCut: `${OPTION_KEY}+${COMMAND_KEY}+M`,
+      icon: mathblockIcon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.HTML_BLOCK'),
+      subTitle: i18n.t('muya.ui.quickInsert.HTML_BLOCK_SUB'),
+      label: 'html',
+      shortCut: `${OPTION_KEY}+${COMMAND_KEY}+J`,
+      icon: htmlIcon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.CODE_BLOCK'),
+      subTitle: i18n.t('muya.ui.quickInsert.CODE_BLOCK_SUB'),
+      label: 'pre',
+      shortCut: `${OPTION_KEY}+${COMMAND_KEY}+C`,
+      icon: codeIcon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.QUOTE_BLOCK'),
+      subTitle: i18n.t('muya.ui.quickInsert.QUOTE_BLOCK_SUB'),
+      label: 'blockquote',
+      shortCut: `${OPTION_KEY}+${COMMAND_KEY}+Q`,
+      icon: quoteIcon
+    }],
+    'list block': [{
+      title: i18n.t('muya.ui.quickInsert.ODER_LIST'),
+      subTitle: i18n.t('muya.ui.quickInsert.ODER_LIST_SUB'),
+      label: 'ol-order',
+      shortCut: `${OPTION_KEY}+${COMMAND_KEY}+O`,
+      icon: orderListIcon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.BULLET_LIST'),
+      subTitle: i18n.t('muya.ui.quickInsert.BULLET_LIST_SUB'),
+      label: 'ul-bullet',
+      shortCut: `${OPTION_KEY}+${COMMAND_KEY}+U`,
+      icon: bulletListIcon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.TODO_LIST'),
+      subTitle: i18n.t('muya.ui.quickInsert.TODO_LIST_SUB'),
+      label: 'ul-task',
+      shortCut: `${OPTION_KEY}+${COMMAND_KEY}+X`,
+      icon: todoListIcon
+    }],
+    diagram: [{
+      title: i18n.t('muya.ui.quickInsert.VEGA_CHART'),
+      subTitle: i18n.t('muya.ui.quickInsert.VEGA_CHART_SUB'),
+      label: 'vega-lite',
+      icon: vegaIcon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.FLOW_CHART'),
+      subTitle: i18n.t('muya.ui.quickInsert.FLOW_CHART_SUB'),
+      label: 'flowchart',
+      icon: flowchartIcon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.SEQUENCE_DIAGRAM'),
+      subTitle: i18n.t('muya.ui.quickInsert.SEQUENCE_DIAGRAM_SUB'),
+      label: 'sequence',
+      icon: sequenceIcon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.PLANT_UML_DIAGRAM'),
+      subTitle: i18n.t('muya.ui.quickInsert.PLANT_UML_DIAGRAM_SUB'),
+      label: 'plantuml',
+      icon: plantumlIcon
+    }, {
+      title: i18n.t('muya.ui.quickInsert.MERMAID'),
+      subTitle: i18n.t('muya.ui.quickInsert.MERMAID_SUB'),
+      label: 'mermaid',
+      icon: mermaidIcon
+    }]
+  }
 }

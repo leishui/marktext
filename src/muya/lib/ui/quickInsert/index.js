@@ -2,8 +2,9 @@ import { filter } from 'fuzzaldrin'
 import { patch, h } from '../../parser/render/snabbdom'
 import { deepCopy } from '../../utils'
 import BaseScrollFloat from '../baseScrollFloat'
-import { quickInsertObj } from './config'
+import { getQuickInsertObj } from './config'
 import './index.css'
+import { i18n } from '../../../../lang'
 
 class QuickInsert extends BaseScrollFloat {
   static pluginName = 'quickInsert'
@@ -17,7 +18,7 @@ class QuickInsert extends BaseScrollFloat {
     this.renderArray = null
     this.activeItem = null
     this.block = null
-    this.renderObj = quickInsertObj
+    this.renderObj = getQuickInsertObj()
     this.render()
     this.listen()
   }
@@ -46,7 +47,7 @@ class QuickInsert extends BaseScrollFloat {
       return _renderObj[key].length !== 0
     })
       .map(key => {
-        const titleVnode = h('div.title', key.toUpperCase())
+        const titleVnode = h('div.title', (i18n.t(`muya.ui.quickInsert.${key}`)).toUpperCase())
         const items = []
         for (const item of _renderObj[key]) {
           const { title, subTitle, label, icon, shortCut } = item
@@ -108,7 +109,7 @@ class QuickInsert extends BaseScrollFloat {
   search (text) {
     const { contentState } = this.muya
     const canInserFrontMatter = contentState.canInserFrontMatter(this.block)
-    const obj = deepCopy(quickInsertObj)
+    const obj = deepCopy(getQuickInsertObj())
     if (!canInserFrontMatter) {
       obj['basic block'].splice(2, 1)
     }
