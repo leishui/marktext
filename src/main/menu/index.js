@@ -268,7 +268,7 @@ class AppMenu {
   /**
    * Refresh all window menus.
    *
-   * NOTE: We need this method to add or remove menu items at runtime.
+   * NOTE: We need this method to refresh menu at runtime when language changed.
    */
   refreshAppMenu () {
     // rebuild all window menus
