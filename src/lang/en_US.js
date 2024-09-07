@@ -156,7 +156,25 @@ export default {
   prefComponents: {
     general: {
       GENERAL: 'General',
-      USER_INTERFACE_LANGUAGE: 'User interface language'
+      AUTO_SAVE: 'Auto Save:',
+      AUTO_SAVE_DES: 'Automatically save document changes',
+      AUTO_SAVE_DELAY_DES: 'Delay following document edit before automatically saving',
+      WINDOW: 'Window:',
+      TITLE_BAR_STYLE_DES: 'Title bar style',
+      TITLE_BAR_STYLE_NOTES: 'Requires restart.',
+      HIDE_SCROLL_BAR_DES: 'Hide scrollbars',
+      OPEN_FILES_IN_NEW_WINDOW_DES: 'Open files in new window',
+      OPEN_FOLDERS_IN_NEW_WINDOW_DES: 'Open folders in new window',
+      ZOOM_DES: 'Zoom',
+      SIDE_BAR: 'Sidebar',
+      WORD_WRAP_IN_TOC_DES: 'Wrap text in table of contents',
+      FILE_SORT_BY_DES: 'Sort field for files in open folders',
+      START_UP_ACTION: 'Action on startup:',
+      OPEN_DEFAULT_DIR: 'Open the default directory',
+      SELECT_FOLDER: 'Select Folder',
+      OPEN_A_BLANK_PAGE: 'Open a blank page',
+      MISC: 'Misc:',
+      USER_INTERFACE_LANGUAGE_DES: 'User interface language'
     }
   }
 }

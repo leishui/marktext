@@ -161,7 +161,25 @@ export default {
   prefComponents: {
     general: {
       GENERAL: '通用设置',
-      USER_INTERFACE_LANGUAGE: '界面语言'
+      AUTO_SAVE: '自动保存:',
+      AUTO_SAVE_DES: '自动保存延迟',
+      AUTO_SAVE_DELAY_DES: '文档改变后多久触发自动保存',
+      WINDOW: '窗口:',
+      TITLE_BAR_STYLE_DES: '标题栏风格',
+      TITLE_BAR_STYLE_NOTES: '需要重启生效.',
+      HIDE_SCROLL_BAR_DES: '隐藏滚动条',
+      OPEN_FILES_IN_NEW_WINDOW_DES: '在新的窗口打开文件',
+      OPEN_FOLDERS_IN_NEW_WINDOW_DES: '在新的窗口打开文件夹',
+      ZOOM_DES: '缩放',
+      SIDE_BAR: '边栏',
+      WORD_WRAP_IN_TOC_DES: 'Wrap text in table of contents',
+      FILE_SORT_BY_DES: 'Sort field for files in open folders',
+      START_UP_ACTION: '启动时操作:',
+      OPEN_DEFAULT_DIR: '打开默认目录',
+      SELECT_FOLDER: '选择文件夹',
+      OPEN_A_BLANK_PAGE: '打开空页面',
+      MISC: '杂项:',
+      USER_INTERFACE_LANGUAGE_DES: '界面语言'
     }
   }
 }
