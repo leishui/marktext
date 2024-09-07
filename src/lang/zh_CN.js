@@ -192,5 +192,45 @@ export default {
       IMAGE: '图片',
       KEY_BINDING: '快捷键'
     }
+  },
+  components: {
+    titleBar: {
+      WORDS: '单词数:',
+      CHARACTERS: '字符数:',
+      PARAGRAPHS: '段落数:',
+      SHORT_W: '词',
+      SHORT_C: '字',
+      SHORT_P: '段',
+      SHORT_A: '全'
+    }
+  },
+  muya: {
+    ui: {
+      frontMenu: {
+        DUPLICATE: '重复',
+        TURN_INTO: '转换为',
+        NEW_PARAGRAPH: '新建段落',
+        DELETE: '删除',
+        turnInto: {
+          PARAGRAPH: 'paragraph',
+          TABLE: 'table',
+          HTML: 'html',
+          MATH_BLOCK: 'mathblock',
+          PRE: 'pre',
+          FRONT_MATTER: 'front-matter',
+          UL_TASK: 'ul-task',
+          UL_BULLET: 'ul-bullet',
+          OL_ORDER: 'ol-order',
+          BLOCKQUOTE: 'blockquote',
+          H1: 'heading 1',
+          H2: 'heading 1',
+          H3: 'heading 1',
+          H4: 'heading 1',
+          H5: 'heading 1',
+          H6: 'heading 1',
+          HR: 'hr'
+        }
+      }
+    }
   }
 }

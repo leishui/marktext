@@ -187,5 +187,45 @@ export default {
       IMAGE: 'Image',
       KEY_BINDING: 'Key Bindings'
     }
+  },
+  components: {
+    titleBar: {
+      WORDS: 'Words:',
+      CHARACTERS: 'Characters:',
+      PARAGRAPHS: 'Paragraphs:',
+      SHORT_W: 'W',
+      SHORT_C: 'C',
+      SHORT_P: 'P',
+      SHORT_A: 'A'
+    }
+  },
+  muya: {
+    ui: {
+      frontMenu: {
+        DUPLICATE: 'Duplicate',
+        TURN_INTO: 'Turn Into',
+        NEW_PARAGRAPH: 'New Paragraph',
+        DELETE: 'Delete',
+        turnInto: {
+          PARAGRAPH: 'paragraph',
+          TABLE: 'table',
+          HTML: 'html',
+          MATH_BLOCK: 'mathblock',
+          PRE: 'pre',
+          FRONT_MATTER: 'front-matter',
+          UL_TASK: 'ul-task',
+          UL_BULLET: 'ul-bullet',
+          OL_ORDER: 'ol-order',
+          BLOCKQUOTE: 'blockquote',
+          H1: 'heading 1',
+          H2: 'heading 1',
+          H3: 'heading 1',
+          H4: 'heading 1',
+          H5: 'heading 1',
+          H6: 'heading 1',
+          HR: 'hr'
+        }
+      }
+    }
   }
 }

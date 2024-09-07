@@ -46,13 +46,13 @@
         >
           <div slot="content">
             <div class="title-item">
-              <span class="front">Words:</span><span class="text">{{wordCount['word']}}</span>
+              <span class="front">{{ $t('components.titleBar.WORDS') }}</span><span class="text">{{wordCount['word']}}</span>
             </div>
             <div class="title-item">
-              <span class="front">Characters:</span><span class="text">{{wordCount['character']}}</span>
+              <span class="front">{{ $t('components.titleBar.CHARACTERS') }}</span><span class="text">{{wordCount['character']}}</span>
             </div>
             <div class="title-item">
-              <span class="front">Paragraphs:</span><span class="text">{{wordCount['paragraph']}}</span>
+              <span class="front">{{ $t('components.titleBar.PARAGRAPHS') }}</span><span class="text">{{wordCount['paragraph']}}</span>
             </div>
           </div>
           <div
@@ -104,28 +104,33 @@ import { mapState } from 'vuex'
 import { minimizePath, restorePath, maximizePath, closePath } from '../../assets/window-controls.js'
 import { PATH_SEPARATOR } from '../../config'
 import { isOsx } from '@/util'
+import { i18n } from '../../../lang'
+
+function getHash () {
+  return {
+    word: {
+      short: i18n.t('components.titleBar.SHORT_W'),
+      full: 'word'
+    },
+    character: {
+      short: i18n.t('components.titleBar.SHORT_C'),
+      full: 'character'
+    },
+    paragraph: {
+      short: i18n.t('components.titleBar.SHORT_P'),
+      full: 'paragraph'
+    },
+    all: {
+      short: i18n.t('components.titleBar.SHORT_A'),
+      full: '(with space)character'
+    }
+  }
+}
 
 export default {
   data () {
     this.isOsx = isOsx
-    this.HASH = {
-      word: {
-        short: 'W',
-        full: 'word'
-      },
-      character: {
-        short: 'C',
-        full: 'character'
-      },
-      paragraph: {
-        short: 'P',
-        full: 'paragraph'
-      },
-      all: {
-        short: 'A',
-        full: '(with space)character'
-      }
-    }
+    this.HASH = getHash()
     this.windowIconMinimize = minimizePath
     this.windowIconRestore = restorePath
     this.windowIconMaximize = maximizePath
@@ -141,6 +146,7 @@ export default {
     ipcRenderer.on('mt::window-unmaximize', this.onUnmaximize)
     ipcRenderer.on('mt::window-enter-full-screen', this.onEnterFullScreen)
     ipcRenderer.on('mt::window-leave-full-screen', this.onLeaveFullScreen)
+    ipcRenderer.on('mt::user-preference', this.onUserPreferenceChanged)
   },
   props: {
     project: Object,
@@ -236,6 +242,12 @@ export default {
     },
     onLeaveFullScreen  () {
       this.isFullScreen = false
+    },
+    onUserPreferenceChanged (e, preferences) {
+      if (preferences.language) {
+        i18n.locale = preferences.language
+        this.HASH = getHash()
+      }
     }
   },
   beforeDestroy () {

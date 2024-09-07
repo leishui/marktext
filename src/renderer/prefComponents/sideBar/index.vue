@@ -90,6 +90,12 @@ export default {
           path: `/preference/${category}`
         })
       }
+    },
+    onUserPreferenceChanged (e, preferences) {
+      if (preferences.language) {
+        i18n.locale = preferences.language
+        this.category = getCategory()
+      }
     }
   },
 
@@ -99,12 +105,7 @@ export default {
       this.currentCategory = this.$route.name
     }
     ipcRenderer.on('settings::change-tab', this.onIpcCategoryChange)
-    ipcRenderer.on('mt::user-preference', (e, preferences) => {
-      if (preferences.language) {
-        i18n.locale = preferences.language
-        this.category = getCategory()
-      }
-    })
+    ipcRenderer.on('mt::user-preference', this.onUserPreferenceChanged)
   },
   unmounted () {
     ipcRenderer.removeAllListener('settings::change-tab', this.onIpcCategoryChange)
