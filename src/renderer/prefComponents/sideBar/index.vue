@@ -36,7 +36,7 @@
 <script>
 import { ipcRenderer } from 'electron'
 import { getCategory, searchContent } from './config'
-import { i18n } from '../../../lang'
+import { changeLanguage } from '../../../lang'
 
 export default {
   data () {
@@ -93,7 +93,7 @@ export default {
     },
     onUserPreferenceChanged (e, preferences) {
       if (preferences.language) {
-        i18n.locale = preferences.language
+        changeLanguage(preferences.language)
         this.category = getCategory()
       }
     }

@@ -1,6 +1,6 @@
 import { ipcRenderer } from 'electron'
 import bus from '../bus'
-import { i18n } from '../../lang'
+import { changeLanguage } from '../../lang'
 
 // user preference
 const state = {
@@ -102,7 +102,7 @@ const getters = {}
 const mutations = {
   SET_USER_PREFERENCE (state, preference) {
     if (preference.language) {
-      i18n.locale = preference.language
+      changeLanguage(preference.language)
     }
     Object.keys(preference).forEach(key => {
       if (typeof preference[key] !== 'undefined' && typeof state[key] !== 'undefined') {

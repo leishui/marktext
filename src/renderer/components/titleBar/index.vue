@@ -104,7 +104,7 @@ import { mapState } from 'vuex'
 import { minimizePath, restorePath, maximizePath, closePath } from '../../assets/window-controls.js'
 import { PATH_SEPARATOR } from '../../config'
 import { isOsx } from '@/util'
-import { i18n } from '../../../lang'
+import { changeLanguage, i18n } from '../../../lang'
 
 function getHash () {
   return {
@@ -245,7 +245,7 @@ export default {
     },
     onUserPreferenceChanged (e, preferences) {
       if (preferences.language) {
-        i18n.locale = preferences.language
+        changeLanguage(preferences.language)
         this.HASH = getHash()
       }
     }

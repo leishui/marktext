@@ -17,7 +17,7 @@ import { watchers } from '../utils/imagePathAutoComplement'
 import { WindowType } from '../windows/base'
 import EditorWindow from '../windows/editor'
 import SettingWindow from '../windows/setting'
-import { i18n } from '../../lang'
+import { changeLanguage } from '../../lang'
 
 class App {
   /**
@@ -148,7 +148,7 @@ class App {
     } = preferences.getAll()
 
     // init UI language
-    i18n.locale = language
+    changeLanguage(language)
 
     if (startUpAction === 'folder' && defaultDirectoryToOpen) {
       const info = normalizeMarkdownPath(defaultDirectoryToOpen)

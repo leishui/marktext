@@ -9,7 +9,7 @@ import { updateFormatMenu } from '../menu/actions/format'
 import { updateSelectionMenus } from '../menu/actions/paragraph'
 import { viewLayoutChanged } from '../menu/actions/view'
 import configureMenu, { configSettingMenu } from '../menu/templates'
-import { i18n } from '../../lang'
+import { changeLanguage } from '../../lang'
 
 const RECENTLY_USED_DOCUMENTS_FILE_NAME = 'recently-used-documents.json'
 const MAX_RECENTLY_USED_DOCUMENTS = 12
@@ -438,7 +438,7 @@ class AppMenu {
         this.updateAutoSaveMenu(prefs.autoSave)
       }
       if (prefs.language) {
-        i18n.locale = prefs.language
+        changeLanguage(prefs.language)
         this.refreshAppMenu()
       }
     })

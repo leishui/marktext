@@ -18,3 +18,7 @@ export const i18n = new VueI18n({
   fallbackLocale: 'en_US',
   messages: langOptions // 设置地区信息
 })
+
+export function changeLanguage (language) {
+  i18n.locale = language
+}
