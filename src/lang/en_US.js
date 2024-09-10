@@ -1,5 +1,5 @@
 export default {
-  // 页面字段
+  label: 'English',
   contextMenu: {
     editor: {
       CUT: 'Cut',

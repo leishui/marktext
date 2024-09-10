@@ -57,11 +57,3 @@ export const fileSortByOptions = [{
   label: 'Title',
   value: 'title'
 }]
-
-export const languageOptions = [{
-  label: 'English',
-  value: 'en_US'
-}, {
-  label: 'Chinese',
-  value: 'zh_CN'
-}]

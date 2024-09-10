@@ -130,9 +130,9 @@ import { isOsx } from '@/util'
 import {
   titleBarStyleOptions,
   zoomOptions,
-  fileSortByOptions,
-  languageOptions
+  fileSortByOptions
 } from './config'
+import { getLanguageOptions } from '../../../lang'
 
 export default {
   components: {
@@ -146,7 +146,7 @@ export default {
     this.titleBarStyleOptions = titleBarStyleOptions
     this.zoomOptions = zoomOptions
     this.fileSortByOptions = fileSortByOptions
-    this.languageOptions = languageOptions
+    this.languageOptions = getLanguageOptions()
     this.isOsx = isOsx
     return {}
   },

@@ -3,8 +3,7 @@
  */
 
 export default {
-
-  // 页面字段
+  label: '简体中文',
   contextMenu: {
     editor: {
       CUT: '剪切',
