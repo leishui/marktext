@@ -22,7 +22,7 @@ export default {
         OPEN: 'Open...'
       },
       edit: {
-        EDIT: '编辑',
+        EDIT: '编辑(&E)',
         EDIT_UNDO: '撤销',
         EDIT_REDO: '重做',
         EDIT_CUT: '剪切',
@@ -46,13 +46,13 @@ export default {
         EDIT_LINE_ENCODING_LF: '换行符 (LF)'
       },
       file: {
-        FILE: '文件',
+        FILE: '文件(&F)',
         FILE_NEW_TAB: '新建标签页',
         FILE_NEW_WINDOW: '新建窗口',
-        FILE_OPEN_FILE: '打开文件',
-        FILE_OPEN_FOLDER: '打开文件夹',
-        FILE_OPEN_RECENT: '打开最近文件',
-        FILE_CLEAR_RECENTLY_USED: '清除最近使用',
+        FILE_OPEN_FILE: '打开文件...',
+        FILE_OPEN_FOLDER: '打开文件夹...',
+        FILE_OPEN_RECENT: '最近使用的文件',
+        FILE_CLEAR_RECENTLY_USED: '清空最近使用文件列表',
         FILE_SAVE: '保存',
         FILE_SAVE_AS: '另存为',
         FILE_AUTO_SAVE: '自动保存',
@@ -67,7 +67,7 @@ export default {
         FILE_QUIT: '退出'
       },
       format: {
-        FORMAT: '格式',
+        FORMAT: '格式(&F)',
         FORMAT_BOLD: '加粗',
         FORMAT_ITALIC: '斜体',
         FORMAT_UNDERLINE: '下划线',
@@ -82,7 +82,7 @@ export default {
         FORMAT_CLEAR_FORMAT: '清除格式'
       },
       help: {
-        HELP: '帮助',
+        HELP: '帮助(&H)',
         HELP_QUICK_START: '快速上手',
         HELP_MARKDOWN_REFERENCE: 'Markdown 参考',
         HELP_CHANGE_LOG: '版本更新记录',
@@ -90,10 +90,10 @@ export default {
         HELP_FEEDBACK_VIA_TWITTER: '通过 Twitter 反馈',
         HELP_REPORT_ISSUE_OR_REQUEST_FEATURE: '报告问题、申请新功能',
         HELP_WEBSITE: '官网',
-        HELP_WATCH_ON_GITHUB: 'Watch on GitHub...',
-        HELP_FOLLOW_US_ON_GITHUB: 'Follow us on Github...',
-        HELP_FOLLOW_US_ON_TWITTER: 'Follow us on Twitter...',
-        HELP_LICENSE: '证书',
+        HELP_WATCH_ON_GITHUB: '在 GitHub 上关注 Mark Text...',
+        HELP_FOLLOW_US_ON_GITHUB: '在 GitHub 上关注我们...',
+        HELP_FOLLOW_US_ON_TWITTER: '在 Twitter 上关注我们...',
+        HELP_LICENSE: '许可协议',
         HELP_CHECK_FOR_UPDATES: '检查更新',
         HELP_ABOUT: '关于 MarkText...'
       },
@@ -108,15 +108,15 @@ export default {
         MARKTEXT_QUIT: '退出 MarkText'
       },
       paragraph: {
-        PARAGRAPH: '段落',
+        PARAGRAPH: '段落(&P)',
         PARAGRAPH_HEADING_1: '一级标题',
         PARAGRAPH_HEADING_2: '二级标题',
         PARAGRAPH_HEADING_3: '三级标题',
         PARAGRAPH_HEADING_4: '四级标题',
         PARAGRAPH_HEADING_5: '五级标题',
         PARAGRAPH_HEADING_6: '六级标题',
-        PARAGRAPH_PROMOTE_HEADING: '提升标题',
-        PARAGRAPH_DEMOTE_HEADING: '降级标题',
+        PARAGRAPH_PROMOTE_HEADING: '提升标题级别',
+        PARAGRAPH_DEMOTE_HEADING: '降低标题级别',
         PARAGRAPH_TABLE: '表格',
         PARAGRAPH_CODE_FENCE: '代码块',
         PARAGRAPH_QUOTE_BLOCK: '引用',
@@ -124,17 +124,17 @@ export default {
         PARAGRAPH_HTML_BLOCK: 'Html 块',
         PARAGRAPH_ORDERED_LIST: '有序列表',
         PARAGRAPH_BULLET_LIST: '无序列表',
-        PARAGRAPH_TASK_LIST: '任务列表',
+        PARAGRAPH_TASK_LIST: '待办列表',
         PARAGRAPH_LOOSE_LIST_ITEM: '松散列表项',
         PARAGRAPH_PARAGRAPH: '段落',
         PARAGRAPH_HORIZONTAL_RULE: '水平分割线',
         PARAGRAPH_FRONT_MATTER: '前言'
       },
       theme: {
-        THEME: '主题'
+        THEME: '主题(&T)'
       },
       view: {
-        VIEW: '视图',
+        VIEW: '视图(&V)',
         VIEW_COMMAND_PALETTE: '命令面板',
         VIEW_SOURCE_CODE_MODE: '源代码模式',
         VIEW_TYPEWRITER_MODE: '打字机模式',
@@ -147,7 +147,7 @@ export default {
         VIEW_RELOAD_WINDOW: '重新加载窗口'
       },
       window: {
-        WINDOW: '窗口',
+        WINDOW: '窗口(&W)',
         WINDOW_MINIMIZE: '最小化',
         WINDOW_ALWAYS_ON_TOP: '窗口置顶',
         WINDOW_ZOOM_IN: '放大',
@@ -158,6 +158,17 @@ export default {
     }
   },
   prefComponents: {
+    sideBar: {
+      PREFERENCES: '偏好设置',
+      SEARCH_PREFERENCES: '搜索设置',
+      GENERAL: '通用设置',
+      EDITOR: '编辑器',
+      MARKDOWN: 'Markdown',
+      SPELLING: '拼写检查',
+      THEME: '主题',
+      IMAGE: '图片',
+      KEY_BINDING: '快捷键'
+    },
     general: {
       GENERAL: '通用设置',
       AUTO_SAVE: '自动保存:',
@@ -180,16 +191,34 @@ export default {
       MISC: '杂项:',
       USER_INTERFACE_LANGUAGE_DES: '界面语言'
     },
-    sideBar: {
-      PREFERENCES: '偏好设置',
-      SEARCH_PREFERENCES: '搜索设置',
-      GENERAL: '通用设置',
+    editor: {
       EDITOR: '编辑器',
-      MARKDOWN: 'Markdown',
-      SPELLING: '拼写检查',
-      THEME: '主题',
-      IMAGE: '图片',
-      KEY_BINDING: '快捷键'
+      EDITOR_SETTINGS: '文本编辑器设置:',
+      EDITOR_FONT_SIZE_DES: '文本编辑器字体大小',
+      EDITOR_LINE_HEIGHT_DES: '文本编辑器行高',
+      EDITOR_FONT_FAMILY_DES: '文本编辑器字体',
+      EDITOR_LINE_WIDTH_DES: '文本编辑器最大宽度',
+      EDITOR_LINE_WIDTH_NOTES: '主题默认值为空，否则使用带单位后缀的数字，其中字符为\'ch\'，像素为\'px\'，百分比为\'%\'.',
+      CODE_BLOCK_SETTINGS: '代码块设置:',
+      CODE_FONT_SIZE_DES: '代码块字体大小',
+      CODE_FONT_FAMILY_DES: '代码块字体',
+      CODE_BLOCK_LINE_NUMBERS_DES: '显示行号',
+      CODE_TRIM_UNNECESSARY_CODE_BLOCK_EMPTY_LINES_DES: '移除头尾空行',
+      WRITING_BEHAVIOR: '编写偏好:',
+      AUTO_PAIR_BRACKET_DES: '编写时自动关闭括号',
+      AUTO_PAIR_MARKDOWN_SYNTAX_DES: '编写时自动补全 markdown 语法',
+      AUTO_PAIR_QUOTE_DES: '编写时自动关闭引号',
+      FILE_REPRESENTATION: '文件内容呈现:',
+      TAB_SIZE_DES: '首选标签页宽度',
+      END_OF_LINE_DES: '换行符种类',
+      DEFAULT_ENCODING_DES: '默认编码',
+      AUTO_GUESS_ENCODING_DES: '自动判断文件编码',
+      TRIM_TRAILING_NEW_LINE_DES: '处理尾部换行符',
+      MISC: '杂项:',
+      TEXT_DIRECTION_OPTIONS_DES: '文字方向',
+      HIDE_QUICK_INSERT_HINT_DES: '隐藏新增段落时选择类型的提示',
+      HIDE_LINK_POPUP_DES: '隐藏鼠标置于链接上时的弹窗',
+      AUTO_CHECK_DES: '是否自动检查任何相关任务'
     }
   },
   components: {
@@ -251,16 +280,16 @@ export default {
         TODO_LIST: '待办列表',
         TODO_LIST_SUB: '- [x] Lorem Ipsum is simply ...',
         diagram: '图表',
-        VEGA_CHART: 'Vega 图表',
-        VEGA_CHART_SUB: '使用vega-lite.js渲染流程图.',
-        FLOW_CHART: 'Flow 图表',
-        FLOW_CHART_SUB: '使用flowchart.js渲染流程图.',
-        SEQUENCE_DIAGRAM: '时序图',
-        SEQUENCE_DIAGRAM_SUB: '使用 js-sequence 渲染时序图.',
+        VEGA_CHART: 'Vega 流程图',
+        VEGA_CHART_SUB: '使用vega-lite.js渲染的流程图.',
+        FLOW_CHART: 'Flowchart 流程图',
+        FLOW_CHART_SUB: '使用flowchart.js渲染的流程图.',
+        SEQUENCE_DIAGRAM: 'js-sequence 时序图',
+        SEQUENCE_DIAGRAM_SUB: '使用 js-sequence 渲染的时序图.',
         PLANT_UML_DIAGRAM: 'PlantUML 图表',
-        PLANT_UML_DIAGRAM_SUB: '渲染 PlantUML 图表.',
+        PLANT_UML_DIAGRAM_SUB: '使用 PlantUML 渲染的图表.',
         MERMAID: 'Mermaid 图表',
-        MERMAID_SUB: '使用 mermaid 渲染图表.'
+        MERMAID_SUB: '使用 mermaid 渲染的图表.'
       }
     }
   }

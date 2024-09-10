@@ -1,13 +1,13 @@
 <template>
   <div class="pref-editor">
-    <h4>Editor</h4>
+    <h4>{{ $t('prefComponents.editor.EDITOR') }}</h4>
     <compound>
       <template #head>
-        <h6 class="title">Text editor settings:</h6>
+        <h6 class="title">{{ $t('prefComponents.editor.EDITOR_SETTINGS') }}</h6>
       </template>
       <template #children>
         <range
-          description="Font size"
+          :description="$t('prefComponents.editor.EDITOR_FONT_SIZE_DES')"
           :value="fontSize"
           :min="12"
           :max="32"
@@ -16,7 +16,7 @@
           :onChange="value => onSelectChange('fontSize', value)"
         ></range>
         <range
-          description="Line height"
+          :description="$t('prefComponents.editor.EDITOR_LINE_HEIGHT_DES')"
           :value="lineHeight"
           :min="1.2"
           :max="2.0"
@@ -24,13 +24,13 @@
           :onChange="value => onSelectChange('lineHeight', value)"
         ></range>
         <font-text-box
-          description="Font family"
+          :description="$t('prefComponents.editor.EDITOR_FONT_FAMILY_DES')"
           :value="editorFontFamily"
           :onChange="value => onSelectChange('editorFontFamily', value)"
         ></font-text-box>
         <text-box
-          description="Maximum width of text editor"
-          notes="Leave empty for theme default, otherwise use number with unit suffix, which is one of 'ch' for characters, 'px' for pixels, or '%' for percentage."
+          :description="$t('prefComponents.editor.EDITOR_LINE_WIDTH_DES')"
+          :notes="$t('prefComponents.editor.EDITOR_LINE_WIDTH_NOTES')"
           :input="editorLineWidth"
           :regexValidator="/^(?:$|[0-9]+(?:ch|px|%)$)/"
           :onChange="value => onSelectChange('editorLineWidth', value)"
@@ -40,11 +40,11 @@
 
     <compound>
       <template #head>
-        <h6 class="title">Code block settings:</h6>
+        <h6 class="title">{{ $t('prefComponents.editor.CODE_BLOCK_SETTINGS') }}</h6>
       </template>
       <template #children>
         <range
-          description="Font size"
+          :description="$t('prefComponents.editor.CODE_FONT_SIZE_DES')"
           :value="codeFontSize"
           :min="12"
           :max="28"
@@ -53,7 +53,7 @@
           :onChange="value => onSelectChange('codeFontSize', value)"
         ></range>
         <font-text-box
-          description="Font family"
+          :description="$t('prefComponents.editor.CODE_FONT_FAMILY_DES')"
           :onlyMonospace="true"
           :value="codeFontFamily"
           :onChange="value => onSelectChange('codeFontFamily', value)"
@@ -61,12 +61,12 @@
         <!-- FIXME: Disabled due to #1648. -->
         <bool
           v-show="false"
-          description="Show line numbers"
+          :description="$t('prefComponents.editor.CODE_BLOCK_LINE_NUMBERS_DES')"
           :bool="codeBlockLineNumbers"
           :onChange="value => onSelectChange('codeBlockLineNumbers', value)"
         ></bool>
         <bool
-          description="Remove leading and trailing empty lines"
+          :description="$t('prefComponents.editor.CODE_TRIM_UNNECESSARY_CODE_BLOCK_EMPTY_LINES_DES')"
           :bool="trimUnnecessaryCodeBlockEmptyLines"
           :onChange="value => onSelectChange('trimUnnecessaryCodeBlockEmptyLines', value)"
         ></bool>
@@ -75,21 +75,21 @@
 
     <compound>
       <template #head>
-        <h6 class="title">Writing behavior:</h6>
+        <h6 class="title">{{ $t('prefComponents.editor.WRITING_BEHAVIOR') }}</h6>
       </template>
       <template #children>
         <bool
-          description="Automatically close brackets when writing"
+          :description="$t('prefComponents.editor.AUTO_PAIR_BRACKET_DES')"
           :bool="autoPairBracket"
           :onChange="value => onSelectChange('autoPairBracket', value)"
         ></bool>
         <bool
-          description="Automatically complete markdown syntax"
+          :description="$t('prefComponents.editor.AUTO_PAIR_MARKDOWN_SYNTAX_DES')"
           :bool="autoPairMarkdownSyntax"
           :onChange="value => onSelectChange('autoPairMarkdownSyntax', value)"
         ></bool>
         <bool
-          description="Automatically close quotation marks"
+          :description="$t('prefComponents.editor.AUTO_PAIR_QUOTE_DES')"
           :bool="autoPairQuote"
           :onChange="value => onSelectChange('autoPairQuote', value)"
         ></bool>
@@ -98,34 +98,34 @@
 
     <compound>
       <template #head>
-        <h6 class="title">File representation:</h6>
+        <h6 class="title">{{ $t('prefComponents.editor.FILE_REPRESENTATION') }}</h6>
       </template>
       <template #children>
         <cur-select
-          description="Preferred tab width"
+          :description="$t('prefComponents.editor.TAB_SIZE_DES')"
           :value="tabSize"
           :options="tabSizeOptions"
           :onChange="value => onSelectChange('tabSize', value)"
         ></cur-select>
         <cur-select
-          description="Line separator type"
+          :description="$t('prefComponents.editor.END_OF_LINE_DES')"
           :value="endOfLine"
           :options="endOfLineOptions"
           :onChange="value => onSelectChange('endOfLine', value)"
         ></cur-select>
         <cur-select
-          description="Default encoding"
+          :description="$t('prefComponents.editor.DEFAULT_ENCODING_DES')"
           :value="defaultEncoding"
           :options="defaultEncodingOptions"
           :onChange="value => onSelectChange('defaultEncoding', value)"
         ></cur-select>
         <bool
-          description="Automatically detect file encoding"
+          :description="$t('prefComponents.editor.AUTO_GUESS_ENCODING_DES')"
           :bool="autoGuessEncoding"
           :onChange="value => onSelectChange('autoGuessEncoding', value)"
         ></bool>
         <cur-select
-          description="Handling of trailing newline characters"
+          :description="$t('prefComponents.editor.TRIM_TRAILING_NEW_LINE_DES')"
           :value="trimTrailingNewline"
           :options="trimTrailingNewlineOptions"
           :onChange="value => onSelectChange('trimTrailingNewline', value)"
@@ -135,27 +135,27 @@
 
     <compound>
       <template #head>
-        <h6 class="title">Misc:</h6>
+        <h6 class="title">{{ $t('prefComponents.editor.MISC') }}</h6>
       </template>
       <template #children>
         <cur-select
-          description="Text direction"
+          :description="$t('prefComponents.editor.TEXT_DIRECTION_OPTIONS_DES')"
           :value="textDirection"
           :options="textDirectionOptions"
           :onChange="value => onSelectChange('textDirection', value)"
         ></cur-select>
         <bool
-          description="Hide hint for selecting type of new paragraph"
+          :description="$t('prefComponents.editor.HIDE_QUICK_INSERT_HINT_DES')"
           :bool="hideQuickInsertHint"
           :onChange="value => onSelectChange('hideQuickInsertHint', value)"
         ></bool>
         <bool
-          description="Hide popup when cursor is over link"
+          :description="$t('prefComponents.editor.HIDE_LINK_POPUP_DES')"
           :bool="hideLinkPopup"
           :onChange="value => onSelectChange('hideLinkPopup', value)"
         ></bool>
         <bool
-          description="Whether to automatically check any related tasks"
+          :description="$t('prefComponents.editor.AUTO_CHECK_DES')"
           :bool="autoCheck"
           :onChange="value => onSelectChange('autoCheck', value)"
         ></bool>

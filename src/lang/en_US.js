@@ -154,6 +154,17 @@ export default {
     }
   },
   prefComponents: {
+    sideBar: {
+      PREFERENCES: 'Preferences',
+      SEARCH_PREFERENCES: 'Search preferences',
+      GENERAL: 'General',
+      EDITOR: 'Editor',
+      MARKDOWN: 'Markdown',
+      SPELLING: 'Spelling',
+      THEME: 'Theme',
+      IMAGE: 'Image',
+      KEY_BINDING: 'Key Bindings'
+    },
     general: {
       GENERAL: 'General',
       AUTO_SAVE: 'Auto Save:',
@@ -176,16 +187,34 @@ export default {
       MISC: 'Misc:',
       USER_INTERFACE_LANGUAGE_DES: 'User interface language'
     },
-    sideBar: {
-      PREFERENCES: 'Preferences',
-      SEARCH_PREFERENCES: 'Search preferences',
-      GENERAL: 'General',
+    editor: {
       EDITOR: 'Editor',
-      MARKDOWN: 'Markdown',
-      SPELLING: 'Spelling',
-      THEME: 'Theme',
-      IMAGE: 'Image',
-      KEY_BINDING: 'Key Bindings'
+      EDITOR_SETTINGS: 'Text editor settings:',
+      EDITOR_FONT_SIZE_DES: 'Font size',
+      EDITOR_LINE_HEIGHT_DES: 'Line height',
+      EDITOR_FONT_FAMILY_DES: 'Font family',
+      EDITOR_LINE_WIDTH_DES: 'Maximum width of text editor',
+      EDITOR_LINE_WIDTH_NOTES: 'Leave empty for theme default, otherwise use number with unit suffix, which is one of \'ch\' for characters, \'px\' for pixels, or \'%\' for percentage.',
+      CODE_BLOCK_SETTINGS: 'Code block settings:',
+      CODE_FONT_SIZE_DES: 'Font size',
+      CODE_FONT_FAMILY_DES: 'Font family',
+      CODE_BLOCK_LINE_NUMBERS_DES: 'Show line numbers',
+      CODE_TRIM_UNNECESSARY_CODE_BLOCK_EMPTY_LINES_DES: 'Remove leading and trailing empty lines',
+      WRITING_BEHAVIOR: 'Writing behavior:',
+      AUTO_PAIR_BRACKET_DES: 'Automatically close brackets when writing',
+      AUTO_PAIR_MARKDOWN_SYNTAX_DES: 'Automatically complete markdown syntax',
+      AUTO_PAIR_QUOTE_DES: 'Automatically close quotation marks',
+      FILE_REPRESENTATION: 'File representation:',
+      TAB_SIZE_DES: 'Preferred tab width',
+      END_OF_LINE_DES: 'Line separator type',
+      DEFAULT_ENCODING_DES: 'Default encoding',
+      AUTO_GUESS_ENCODING_DES: 'Automatically detect file encoding',
+      TRIM_TRAILING_NEW_LINE_DES: 'Handling of trailing newline characters',
+      MISC: 'Misc:',
+      TEXT_DIRECTION_OPTIONS_DES: 'Text direction',
+      HIDE_QUICK_INSERT_HINT_DES: 'Hide hint for selecting type of new paragraph',
+      HIDE_LINK_POPUP_DES: 'Hide popup when cursor is over link',
+      AUTO_CHECK_DES: 'Whether to automatically check any related tasks'
     }
   },
   components: {
