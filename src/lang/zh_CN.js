@@ -271,6 +271,20 @@ export default {
       RELATIVE_DIRECTORY_NAME_PLACE_HOLDER_DES: '相对路径文件夹名',
       FOOTNOTE_HEAD: '在上面输入框中使用',
       FOOTNOTE_TAIL: '来插入对应的文件名.'
+    },
+    keybindings: {
+      KEY_BINDINGS: '快捷键',
+      KEY_BINDINGS_DES: '自定义MarkText快捷键，然后单击下面的保存按钮以应用所有更改(需要重新启动). 可以在此找到所有可用和默认的快捷键绑定:',
+      KEYBINDING_LIST_DESCRIPTION: '描述',
+      KEYBINDING_LIST_KEY_COMBINATION: '组合键',
+      KEYBINDING_LIST_OPTIONS: '选项',
+      KEYBINDING_LIST_EDIT: '编辑',
+      KEYBINDING_LIST_RESET: '重置',
+      KEYBINDING_LIST_UNBIND: '解绑',
+      SAVE: '保存',
+      RESTORE_DEFAULT_KEY_BINDING: '恢复默认',
+      DEBUG_OPTIONS: '调试选项:',
+      DUMP_KEYBOARD_INFORMATION: '导出快捷键信息'
     }
   },
   components: {

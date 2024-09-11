@@ -267,6 +267,20 @@ export default {
       RELATIVE_DIRECTORY_NAME_PLACE_HOLDER_DES: 'Relative image folder name',
       FOOTNOTE_HEAD: 'Include',
       FOOTNOTE_TAIL: 'in the text-box above to automatically insert the document file name.'
+    },
+    keybindings: {
+      KEY_BINDINGS: 'Key Bindings',
+      KEY_BINDINGS_DES: 'Customize MarkText shortcuts and click on the save button below to apply all changes (requires a restart). All available and default key binding can be found',
+      KEYBINDING_LIST_DESCRIPTION: 'Description',
+      KEYBINDING_LIST_KEY_COMBINATION: 'Key Combination',
+      KEYBINDING_LIST_OPTIONS: 'Options',
+      KEYBINDING_LIST_EDIT: 'Edit',
+      KEYBINDING_LIST_RESET: 'Reset',
+      KEYBINDING_LIST_UNBIND: 'Unbind',
+      SAVE: 'Save',
+      RESTORE_DEFAULT_KEY_BINDING: 'Restore default key bindings',
+      DEBUG_OPTIONS: 'Debug options:',
+      DUMP_KEYBOARD_INFORMATION: 'Dump keyboard information'
     }
   },
   components: {
