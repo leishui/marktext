@@ -239,6 +239,25 @@ export default {
       SEQUENCE_THEME_DES: '时序图主题',
       MISC: '杂项:',
       PREFER_HEADING_STYLE_DES: '标题样式偏好'
+    },
+    spellchecker: {
+      SPELLING: '拼写检查',
+      SPELL_CHECKER_ENABLED_DES: '启用拼写检查',
+      SPELL_CHECKER_NO_UNDERLINE_DES: '隐藏拼写错误的标识',
+      AUTO_DETECT_DOCUMENT_LANGUAGE_DES: '自动识别文档语言',
+      SPELL_CHECKER_LANGUAGE_DES: '拼写检查的默认语言',
+      SPELL_CHECKER_DES: '键入时将自动检测使用的语言。可以通过系统设置中的“语言和地区”添加其他语言。',
+      CUSTOM_DICTIONARY: '自定义词典:',
+      CUSTOM_DICTIONARY_DES: '编辑自定义词典中的词.',
+      NO_WORDS_AVAILABLE: '无有效自定义词'
+    },
+    theme: {
+      THEME: '主题',
+      AUTO_SWITCH_THEME_DES: '跟随系统设置自动调整主题',
+      OPEN_THEME_FOLDER: '打开主题文件夹',
+      OPEN_FOLDER: '打开文件夹',
+      IMPORT_CUSTOM_THEME: '导入自定义主题',
+      IMPORT_THEME: '导入主题'
     }
   },
   components: {

@@ -235,6 +235,25 @@ export default {
       SEQUENCE_THEME_DES: 'Sequence diagram theme',
       MISC: 'Misc:',
       PREFER_HEADING_STYLE_DES: 'Preferred heading style'
+    },
+    spellchecker: {
+      SPELLING: 'Spelling',
+      SPELL_CHECKER_ENABLED_DES: 'Enable spell checking',
+      SPELL_CHECKER_NO_UNDERLINE_DES: 'Hide marks for spelling errors',
+      AUTO_DETECT_DOCUMENT_LANGUAGE_DES: 'Automatically detect document language',
+      SPELL_CHECKER_LANGUAGE_DES: 'Default language for spell checking',
+      SPELL_CHECKER_DES: 'The used language will be detected automatically while typing. Additional languages may be added through "Language & Region" in your system preferences pane.',
+      CUSTOM_DICTIONARY: 'Custom dictionary:',
+      CUSTOM_DICTIONARY_DES: 'Edit words in custom dictionary.',
+      NO_WORDS_AVAILABLE: 'No words available'
+    },
+    theme: {
+      THEME: 'Theme',
+      AUTO_SWITCH_THEME_DES: 'Automatically adjust application theme according to system settings',
+      OPEN_THEME_FOLDER: 'Open the themes folder',
+      OPEN_FOLDER: 'Open Folder',
+      IMPORT_CUSTOM_THEME: 'Import custom themes',
+      IMPORT_THEME: 'Import Theme'
     }
   },
   components: {

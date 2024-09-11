@@ -1,30 +1,30 @@
 <template>
   <div class="pref-spellchecker">
-    <h4>Spelling</h4>
+    <h4>{{ $t('prefComponents.spellchecker.SPELLING') }}</h4>
     <compound>
       <template #head>
         <bool
-          description="Enable spell checking"
+          :description="$t('prefComponents.spellchecker.SPELL_CHECKER_ENABLED_DES')"
           :bool="spellcheckerEnabled"
           :onChange="handleSpellcheckerEnabled"
         ></bool>
       </template>
       <template #children>
         <bool
-          description="Hide marks for spelling errors"
+          :description="$t('prefComponents.spellchecker.SPELL_CHECKER_NO_UNDERLINE_DES')"
           :bool="spellcheckerNoUnderline"
           :disable="!spellcheckerEnabled"
           :onChange="value => onSelectChange('spellcheckerNoUnderline', value)"
         ></bool>
         <bool
           v-show="isOsx"
-          description="Automatically detect document language"
+          :description="$t('prefComponents.spellchecker.AUTO_DETECT_DOCUMENT_LANGUAGE_DES')"
           :bool="true"
           :disable="true"
         ></bool>
         <cur-select
           v-show="!isOsx"
-          description="Default language for spell checking"
+          :description="$t('prefComponents.spellchecker.SPELL_CHECKER_LANGUAGE_DES')"
           :value="spellcheckerLanguage"
           :options="availableDictionaries"
           :disable="!spellcheckerEnabled"
@@ -33,16 +33,16 @@
       </template>
     </compound>
 
-    <div v-if="isOsx && spellcheckerEnabled" class="description">
-      The used language will be detected automatically while typing. Additional languages may be added through "Language & Region" in your system preferences pane.
+    <div v-if="isOsx && spellcheckerEnabled" class=":description">
+      {{ $t('prefComponents.spellchecker.SPELL_CHECKER_DES') }}
     </div>
 
     <div v-if="!isOsx && spellcheckerEnabled">
-      <h6 class="title">Custom dictionary:</h6>
-      <div class="description">Edit words in custom dictionary.</div>
+      <h6 class="title">{{ $t('prefComponents.spellchecker.CUSTOM_DICTIONARY') }}</h6>
+      <div class=":description">{{ $t('prefComponents.spellchecker.CUSTOM_DICTIONARY_DES') }}</div>
       <el-table
         :data="wordsInCustomDictionary"
-        empty-text="No words available"
+        :empty-text="$t('prefComponents.spellchecker.NO_WORDS_AVAILABLE')"
         style="width: 100%"
       >
         <el-table-column prop="word" label="Word">
@@ -168,7 +168,7 @@ export default {
 
 <style scoped>
   .pref-spellchecker {
-    & div.description {
+    & div.:description {
       margin-top: 10px;
       margin-bottom: 2px;
       color: var(--iconColor);

@@ -1,6 +1,6 @@
 <template>
   <div class="pref-theme">
-    <h4>Theme</h4>
+    <h4>{{ $t('prefComponents.theme.THEME') }}</h4>
     <section class="offcial-themes">
       <div v-for="t of themes" :key="t.name" class="theme"
         :class="[t.name, { 'active': t.name === theme }]"
@@ -11,7 +11,7 @@
     </section>
     <separator></separator>
     <cur-select
-      description="Automatically adjust application theme according to system settings"
+      :description="$t('prefComponents.theme.AUTO_SWITCH_THEME_DES')"
       :value="autoSwitchTheme"
       :options="autoSwitchThemeOptions"
       :onChange="value => onSelectChange('autoSwitchTheme', value)"
@@ -19,13 +19,13 @@
     <separator v-show="false"></separator>
     <section v-show="false" class="import-themes ag-underdevelop">
       <div>
-        <span>Open the themes folder</span>
-        <el-button size="small">Open Folder</el-button>
+        <span>{{ $t('prefComponents.theme.OPEN_THEME_FOLDER') }}</span>
+        <el-button size="small">{{ $t('prefComponents.theme.OPEN_FOLDER') }}</el-button>
       </div>
 
       <div>
-        <span>Import custom themes</span>
-        <el-button size="small">Import Theme</el-button>
+        <span>{{ $t('prefComponents.theme.IMPORT_CUSTOM_THEME') }}</span>
+        <el-button size="small">{{ $t('prefComponents.theme.IMPORT_THEME') }}</el-button>
       </div>
     </section>
   </div>
