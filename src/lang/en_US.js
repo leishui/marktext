@@ -254,6 +254,19 @@ export default {
       OPEN_FOLDER: 'Open Folder',
       IMPORT_CUSTOM_THEME: 'Import custom themes',
       IMPORT_THEME: 'Import Theme'
+    },
+    image: {
+      IMAGE: 'Image',
+      IMAGE_INSERT_ACTION: 'Default action after an image is inserted from local folder or clipboard',
+      IMAGE_INSERT_ACTION_TOOLTIP: 'Clipboard handling is only fully supported on macOS and Windows.',
+      IMAGE_FOLD_PATH: 'Global or relative image folder',
+      IMAGE_FOLD_PATH_DES: 'Global image folder',
+      OPEN: 'Open...',
+      SHOW_IN_FOLDER: 'Show in Folder',
+      IMAGE_PREFER_RELATIVE_DIRECTORY_DES: 'Prefer relative assets folder',
+      RELATIVE_DIRECTORY_NAME_PLACE_HOLDER_DES: 'Relative image folder name',
+      FOOTNOTE_HEAD: 'Include',
+      FOOTNOTE_TAIL: 'in the text-box above to automatically insert the document file name.'
     }
   },
   components: {

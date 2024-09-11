@@ -1,27 +1,27 @@
 <template>
   <section class="image-folder">
-    <h5>Global or relative image folder</h5>
-    <text-box description="Global image folder" :input="imageFolderPath"
+    <h5>{{ $t('prefComponents.image.IMAGE_FOLD_PATH') }}</h5>
+    <text-box :description="$t('prefComponents.image.IMAGE_FOLD_PATH_DES')" :input="imageFolderPath"
       :regexValidator="/^(?:$|([a-zA-Z]:)?[\/\\].*$)/" :defaultValue="folderPathPlaceholder"
       :onChange="value => modifyImageFolderPath(value)"></text-box>
     <div>
-      <el-button size="mini" @click="modifyImageFolderPath(undefined)">Open...</el-button>
-      <el-button size="mini" @click="openImageFolder">Show in Folder</el-button>
+      <el-button size="mini" @click="modifyImageFolderPath(undefined)">{{ $t('prefComponents.image.OPEN') }}</el-button>
+      <el-button size="mini" @click="openImageFolder">{{ $t('prefComponents.image.SHOW_IN_FOLDER') }}</el-button>
     </div>
     <compound>
       <template #head>
-        <bool description="Prefer relative assets folder"
+        <bool :description="$t('prefComponents.image.IMAGE_PREFER_RELATIVE_DIRECTORY_DES')"
           more="https://github.com/marktext/marktext/blob/develop/docs/IMAGES.md"
           :bool="imagePreferRelativeDirectory"
           :onChange="value => onSelectChange('imagePreferRelativeDirectory', value)"></bool>
       </template>
       <template #children>
-        <text-box description="Relative image folder name" :input="imageRelativeDirectoryName"
+        <text-box :description="$t('prefComponents.image.RELATIVE_DIRECTORY_NAME_PLACE_HOLDER_DES')" :input="imageRelativeDirectoryName"
           :regexValidator="/^(?:$|(?![a-zA-Z]:)[^\/\\].*$)/"
           :defaultValue="relativeDirectoryNamePlaceholder"
           :onChange="value => onSelectChange('imageRelativeDirectoryName', value)"></text-box>
         <div class="footnote">
-          Include <code>${filename}</code> in the text-box above to automatically insert the document file name.
+          {{ $t('prefComponents.image.FOOTNOTE_HEAD') }} <code>${filename}</code> {{ $t('prefComponents.image.FOOTNOTE_TAIL') }}
         </div>
       </template>
     </compound>

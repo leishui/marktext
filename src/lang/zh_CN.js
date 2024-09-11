@@ -258,6 +258,19 @@ export default {
       OPEN_FOLDER: '打开文件夹',
       IMPORT_CUSTOM_THEME: '导入自定义主题',
       IMPORT_THEME: '导入主题'
+    },
+    image: {
+      IMAGE: '图片',
+      IMAGE_INSERT_ACTION: '从本地文件夹或剪贴板插入图像后的默认操作',
+      IMAGE_INSERT_ACTION_TOOLTIP: '剪贴板处理仅在 macOS 和 Windows 上完全支持.',
+      IMAGE_FOLD_PATH: '图片存放的绝对路径或相对路径',
+      IMAGE_FOLD_PATH_DES: '图片存放的绝对路径',
+      OPEN: '打开...',
+      SHOW_IN_FOLDER: '打开该文件夹',
+      IMAGE_PREFER_RELATIVE_DIRECTORY_DES: '期望存放图片到相对路径',
+      RELATIVE_DIRECTORY_NAME_PLACE_HOLDER_DES: '相对路径文件夹名',
+      FOOTNOTE_HEAD: '在上面输入框中使用',
+      FOOTNOTE_TAIL: '来插入对应的文件名.'
     }
   },
   components: {

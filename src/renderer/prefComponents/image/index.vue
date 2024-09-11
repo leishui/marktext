@@ -1,10 +1,10 @@
 <template>
   <div class="pref-image">
-    <h4>Image</h4>
+    <h4>{{ $t('prefComponents.image.IMAGE') }}</h4>
     <section class="image-ctrl">
-      <div>Default action after an image is inserted from local folder or clipboard
+      <div>{{ $t('prefComponents.image.IMAGE_INSERT_ACTION') }}
         <el-tooltip class='item' effect='dark'
-          content='Clipboard handling is only fully supported on macOS and Windows.'
+          :content="$t('prefComponents.image.IMAGE_INSERT_ACTION_TOOLTIP')"
           placement='top-start'>
           <i class="el-icon-info"></i>
         </el-tooltip>
