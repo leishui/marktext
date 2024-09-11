@@ -1,10 +1,14 @@
-export const titleBarStyleOptions = [{
-  label: 'Custom',
-  value: 'custom'
-}, {
-  label: 'Native',
-  value: 'native'
-}]
+import { i18n } from '../../../lang'
+
+export function getTitleBarStyleOptions () {
+  return [{
+    label: i18n.t('prefComponents.general.TITLE_BAR_STYLE_OPTIONS.CUSTOM'),
+    value: 'custom'
+  }, {
+    label: i18n.t('prefComponents.general.TITLE_BAR_STYLE_OPTIONS.NATIVE'),
+    value: 'native'
+  }]
+}
 
 export const zoomOptions = [{
   label: '50.0%',
@@ -47,13 +51,15 @@ export const zoomOptions = [{
   value: 2.0
 }]
 
-export const fileSortByOptions = [{
-  label: 'Creation time',
-  value: 'created'
-}, {
-  label: 'Modification time',
-  value: 'modified'
-}, {
-  label: 'Title',
-  value: 'title'
-}]
+export function getFileSortByOptions () {
+  return [{
+    label: i18n.t('prefComponents.general.FILE_SORT_BY_OPTIONS.CREATE_TIME'),
+    value: 'created'
+  }, {
+    label: i18n.t('prefComponents.general.FILE_SORT_BY_OPTIONS.MODIFICATION_TIME'),
+    value: 'modified'
+  }, {
+    label: i18n.t('prefComponents.general.FILE_SORT_BY_OPTIONS.TITLE'),
+    value: 'title'
+  }]
+}

@@ -176,6 +176,10 @@ export default {
       AUTO_SAVE_DELAY_DES: '文档改变后多久触发自动保存',
       WINDOW: '窗口:',
       TITLE_BAR_STYLE_DES: '标题栏风格',
+      TITLE_BAR_STYLE_OPTIONS: {
+        CUSTOM: '自定义的',
+        NATIVE: '原生的'
+      },
       TITLE_BAR_STYLE_NOTES: '需要重启生效.',
       HIDE_SCROLL_BAR_DES: '隐藏滚动条',
       OPEN_FILES_IN_NEW_WINDOW_DES: '在新的窗口打开文件',
@@ -184,6 +188,11 @@ export default {
       SIDE_BAR: '边栏',
       WORD_WRAP_IN_TOC_DES: '在目录中自动换行',
       FILE_SORT_BY_DES: '文件排序依据',
+      FILE_SORT_BY_OPTIONS: {
+        CREATE_TIME: '创建时间',
+        MODIFICATION_TIME: '修改时间',
+        TITLE: '文件名'
+      },
       START_UP_ACTION: '启动时操作:',
       OPEN_DEFAULT_DIR: '打开默认目录',
       SELECT_FOLDER: '选择文件夹',

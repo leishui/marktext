@@ -170,6 +170,10 @@ export default {
       AUTO_SAVE: 'Auto Save:',
       AUTO_SAVE_DES: 'Automatically save document changes',
       AUTO_SAVE_DELAY_DES: 'Delay following document edit before automatically saving',
+      TITLE_BAR_STYLE_OPTIONS: {
+        CUSTOM: 'Custom',
+        NATIVE: 'Native'
+      },
       WINDOW: 'Window:',
       TITLE_BAR_STYLE_DES: 'Title bar style',
       TITLE_BAR_STYLE_NOTES: 'Requires restart.',
@@ -180,6 +184,11 @@ export default {
       SIDE_BAR: 'Sidebar',
       WORD_WRAP_IN_TOC_DES: 'Wrap text in table of contents',
       FILE_SORT_BY_DES: 'Sort field for files in open folders',
+      FILE_SORT_BY_OPTIONS: {
+        CREATE_TIME: 'Creation time',
+        MODIFICATION_TIME: 'Modification time',
+        TITLE: 'Title'
+      },
       START_UP_ACTION: 'Action on startup:',
       OPEN_DEFAULT_DIR: 'Open the default directory',
       SELECT_FOLDER: 'Select Folder',

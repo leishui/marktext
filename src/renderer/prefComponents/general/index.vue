@@ -128,11 +128,12 @@ import Separator from '../common/separator'
 import { isOsx } from '@/util'
 
 import {
-  titleBarStyleOptions,
+  getTitleBarStyleOptions,
   zoomOptions,
-  fileSortByOptions
+  getFileSortByOptions
 } from './config'
-import { getLanguageOptions } from '../../../lang'
+import { changeLanguage, getLanguageOptions } from '../../../lang'
+import { ipcRenderer } from 'electron'
 
 export default {
   components: {
@@ -143,9 +144,9 @@ export default {
     Separator
   },
   data () {
-    this.titleBarStyleOptions = titleBarStyleOptions
+    this.titleBarStyleOptions = getTitleBarStyleOptions()
     this.zoomOptions = zoomOptions
-    this.fileSortByOptions = fileSortByOptions
+    this.fileSortByOptions = getFileSortByOptions()
     this.languageOptions = getLanguageOptions()
     this.isOsx = isOsx
     return {}
@@ -180,7 +181,17 @@ export default {
     },
     selectDefaultDirectoryToOpen () {
       this.$store.dispatch('SELECT_DEFAULT_DIRECTORY_TO_OPEN')
+    },
+    onUserPreferenceChanged (e, preferences) {
+      if (preferences.language) {
+        changeLanguage(preferences.language)
+        this.titleBarStyleOptions = getTitleBarStyleOptions()
+        this.fileSortByOptions = getFileSortByOptions()
+      }
     }
+  },
+  mounted () {
+    ipcRenderer.on('mt::user-preference', this.onUserPreferenceChanged)
   }
 }
 </script>
