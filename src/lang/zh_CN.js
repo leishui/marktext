@@ -219,6 +219,26 @@ export default {
       HIDE_QUICK_INSERT_HINT_DES: '隐藏新增段落时选择类型的提示',
       HIDE_LINK_POPUP_DES: '隐藏鼠标置于链接上时的弹窗',
       AUTO_CHECK_DES: '是否自动检查任何相关任务'
+    },
+    markdown: {
+      MARKDOWN: 'Markdown',
+      LIST: '列表:',
+      PREFER_LOOSE_LIST_ITEM_DES: '使用松散的列表项',
+      BULLET_LIST_MARKER_DES: '无序列表标识符号偏好',
+      ODER_LIST_DELIMITER_DES: '顺序列表标识符号偏好',
+      LIST_INDENTATION_DES: '列表缩进偏好',
+      MARKDOWN_EXTENSIONS: 'Markdown 扩展:',
+      FRONT_MATTER_TYPE_DES: '前言的格式',
+      SUPER_SUB_SCRIPT_DES: '启用Pandoc风格的上标和下标',
+      FOOTNOTE_DES: '启用Pandoc风格的脚注',
+      FOOTNOTE_NOTES: '需要重启生效.',
+      COMPATIBILITY: '兼容性:',
+      IS_HTML_ENABLED_DES: '启用 HTML 渲染',
+      IS_GITLAB_COMPATIBILITY_ENABLED_DES: '启用 GitLab 的兼容模式',
+      DIAGRAMS: '图表:',
+      SEQUENCE_THEME_DES: '时序图主题',
+      MISC: '杂项:',
+      PREFER_HEADING_STYLE_DES: '标题样式偏好'
     }
   },
   components: {

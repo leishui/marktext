@@ -215,6 +215,26 @@ export default {
       HIDE_QUICK_INSERT_HINT_DES: 'Hide hint for selecting type of new paragraph',
       HIDE_LINK_POPUP_DES: 'Hide popup when cursor is over link',
       AUTO_CHECK_DES: 'Whether to automatically check any related tasks'
+    },
+    markdown: {
+      MARKDOWN: 'Markdown',
+      LIST: 'Lists:',
+      PREFER_LOOSE_LIST_ITEM_DES: 'Prefer loose list items',
+      BULLET_LIST_MARKER_DES: 'Preferred marker for bullet lists',
+      ODER_LIST_DELIMITER_DES: 'Preferred marker for ordered lists',
+      LIST_INDENTATION_DES: 'Preferred list indentation',
+      MARKDOWN_EXTENSIONS: 'Markdown extensions:',
+      FRONT_MATTER_TYPE_DES: 'Front matter format',
+      SUPER_SUB_SCRIPT_DES: 'Enable Pandoc-style superscript and subscript',
+      FOOTNOTE_DES: 'Enable Pandoc-style footnotes',
+      FOOTNOTE_NOTES: 'Requires restart.',
+      COMPATIBILITY: 'Compatibility:',
+      IS_HTML_ENABLED_DES: 'Enable HTML rendering',
+      IS_GITLAB_COMPATIBILITY_ENABLED_DES: 'Enable GitLab compatibility mode',
+      DIAGRAMS: 'Diagrams:',
+      SEQUENCE_THEME_DES: 'Sequence diagram theme',
+      MISC: 'Misc:',
+      PREFER_HEADING_STYLE_DES: 'Preferred heading style'
     }
   },
   components: {
