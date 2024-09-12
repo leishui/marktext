@@ -251,6 +251,14 @@ export default {
       BULLET_LIST_MARKER_DES: '无序列表标识符号偏好',
       ODER_LIST_DELIMITER_DES: '顺序列表标识符号偏好',
       LIST_INDENTATION_DES: '列表缩进偏好',
+      LIST_INDENTATION_OPTIONS: {
+        DFM: 'DocFX 样式',
+        TAB: '真实的制表符',
+        SINGLE: '单个空格字符',
+        TWO: '两个空格字符',
+        THREE: '三个空格字符',
+        FOUR: '四个空格字符'
+      },
       MARKDOWN_EXTENSIONS: 'Markdown 扩展:',
       FRONT_MATTER_TYPE_DES: '前言的格式',
       SUPER_SUB_SCRIPT_DES: '启用Pandoc风格的上标和下标',
@@ -261,8 +269,16 @@ export default {
       IS_GITLAB_COMPATIBILITY_ENABLED_DES: '启用 GitLab 的兼容模式',
       DIAGRAMS: '图表:',
       SEQUENCE_THEME_DES: '时序图主题',
+      SEQUENCE_THEME_OPTIONS: {
+        HAND_DRAWN: '手绘',
+        SIMPLE: '简单'
+      },
       MISC: '杂项:',
-      PREFER_HEADING_STYLE_DES: '标题样式偏好'
+      PREFER_HEADING_STYLE_DES: '标题样式偏好',
+      PREFER_HEADING_STYLE_OPTIONS: {
+        ATX: 'ATX 标题',
+        SETEXT: 'Setext 标题'
+      }
     },
     spellchecker: {
       SPELLING: '拼写检查',

@@ -247,6 +247,14 @@ export default {
       BULLET_LIST_MARKER_DES: 'Preferred marker for bullet lists',
       ODER_LIST_DELIMITER_DES: 'Preferred marker for ordered lists',
       LIST_INDENTATION_DES: 'Preferred list indentation',
+      LIST_INDENTATION_OPTIONS: {
+        DFM: 'DocFX style',
+        TAB: 'True tab character',
+        SINGLE: 'Single space character',
+        TWO: 'Two space characters',
+        THREE: 'Three space characters',
+        FOUR: 'Four space characters'
+      },
       MARKDOWN_EXTENSIONS: 'Markdown extensions:',
       FRONT_MATTER_TYPE_DES: 'Front matter format',
       SUPER_SUB_SCRIPT_DES: 'Enable Pandoc-style superscript and subscript',
@@ -257,8 +265,16 @@ export default {
       IS_GITLAB_COMPATIBILITY_ENABLED_DES: 'Enable GitLab compatibility mode',
       DIAGRAMS: 'Diagrams:',
       SEQUENCE_THEME_DES: 'Sequence diagram theme',
+      SEQUENCE_THEME_OPTIONS: {
+        HAND_DRAWN: 'Hand drawn',
+        SIMPLE: 'Simple'
+      },
       MISC: 'Misc:',
-      PREFER_HEADING_STYLE_DES: 'Preferred heading style'
+      PREFER_HEADING_STYLE_DES: 'Preferred heading style',
+      PREFER_HEADING_STYLE_OPTIONS: {
+        ATX: 'ATX heading',
+        SETEXT: 'Setext heading'
+      }
     },
     spellchecker: {
       SPELLING: 'Spelling',

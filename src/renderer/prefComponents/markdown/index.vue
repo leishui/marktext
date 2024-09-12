@@ -121,11 +121,13 @@ import CurSelect from '../common/select'
 import {
   bulletListMarkerOptions,
   orderListDelimiterOptions,
-  preferHeadingStyleOptions,
-  listIndentationOptions,
+  getPreferHeadingStyleOptions,
+  getListIndentationOptions,
   frontmatterTypeOptions,
-  sequenceThemeOptions
+  getSequenceThemeOptions
 } from './config'
+import { changeLanguage } from '../../../lang'
+import { ipcRenderer } from 'electron'
 
 export default {
   components: {
@@ -137,10 +139,10 @@ export default {
   data () {
     this.bulletListMarkerOptions = bulletListMarkerOptions
     this.orderListDelimiterOptions = orderListDelimiterOptions
-    this.preferHeadingStyleOptions = preferHeadingStyleOptions
-    this.listIndentationOptions = listIndentationOptions
+    this.preferHeadingStyleOptions = getPreferHeadingStyleOptions()
+    this.listIndentationOptions = getListIndentationOptions()
     this.frontmatterTypeOptions = frontmatterTypeOptions
-    this.sequenceThemeOptions = sequenceThemeOptions
+    this.sequenceThemeOptions = getSequenceThemeOptions()
     return {}
   },
   computed: {
@@ -161,7 +163,18 @@ export default {
   methods: {
     onSelectChange (type, value) {
       this.$store.dispatch('SET_SINGLE_PREFERENCE', { type, value })
+    },
+    onUserPreferenceChanged (e, preferences) {
+      if (preferences.language) {
+        changeLanguage(preferences.language)
+        this.preferHeadingStyleOptions = getPreferHeadingStyleOptions()
+        this.listIndentationOptions = getListIndentationOptions()
+        this.sequenceThemeOptions = getSequenceThemeOptions()
+      }
     }
+  },
+  mounted () {
+    ipcRenderer.on('mt::user-preference', this.onUserPreferenceChanged)
   }
 }
 </script>

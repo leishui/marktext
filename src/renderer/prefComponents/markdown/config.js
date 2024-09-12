@@ -1,3 +1,5 @@
+import { i18n } from '../../../lang'
+
 export const bulletListMarkerOptions = [{
   label: '*',
   value: '*'
@@ -17,33 +19,37 @@ export const orderListDelimiterOptions = [{
   value: ')'
 }]
 
-export const preferHeadingStyleOptions = [{
-  label: 'ATX heading',
-  value: 'atx'
-}, {
-  label: 'Setext heading',
-  value: 'setext'
-}]
+export function getPreferHeadingStyleOptions () {
+  return [{
+    label: i18n.t('prefComponents.markdown.PREFER_HEADING_STYLE_OPTIONS.ATX'),
+    value: 'atx'
+  }, {
+    label: i18n.t('prefComponents.markdown.PREFER_HEADING_STYLE_OPTIONS.SETEXT'),
+    value: 'setext'
+  }]
+}
 
-export const listIndentationOptions = [{
-  label: 'DocFX style',
-  value: 'dfm'
-}, {
-  label: 'True tab character',
-  value: 'tab'
-}, {
-  label: 'Single space character',
-  value: 1
-}, {
-  label: 'Two space characters',
-  value: 2
-}, {
-  label: 'Three space characters',
-  value: 3
-}, {
-  label: 'Four space characters',
-  value: 4
-}]
+export function getListIndentationOptions () {
+  return [{
+    label: i18n.t('prefComponents.markdown.LIST_INDENTATION_OPTIONS.DFM'),
+    value: 'dfm'
+  }, {
+    label: i18n.t('prefComponents.markdown.LIST_INDENTATION_OPTIONS.TAB'),
+    value: 'tab'
+  }, {
+    label: i18n.t('prefComponents.markdown.LIST_INDENTATION_OPTIONS.SINGLE'),
+    value: 1
+  }, {
+    label: i18n.t('prefComponents.markdown.LIST_INDENTATION_OPTIONS.TWO'),
+    value: 2
+  }, {
+    label: i18n.t('prefComponents.markdown.LIST_INDENTATION_OPTIONS.THREE'),
+    value: 3
+  }, {
+    label: i18n.t('prefComponents.markdown.LIST_INDENTATION_OPTIONS.FOUR'),
+    value: 4
+  }]
+}
 
 export const frontmatterTypeOptions = [{
   label: 'YAML',
@@ -59,10 +65,12 @@ export const frontmatterTypeOptions = [{
   value: '{'
 }]
 
-export const sequenceThemeOptions = [{
-  label: 'Hand drawn',
-  value: 'hand'
-}, {
-  label: 'Simple',
-  value: 'simple'
-}]
+export function getSequenceThemeOptions () {
+  return [{
+    label: i18n.t('prefComponents.markdown.SEQUENCE_THEME_OPTIONS.HAND_DRAWN'),
+    value: 'hand'
+  }, {
+    label: i18n.t('prefComponents.markdown.SEQUENCE_THEME_OPTIONS.SIMPLE'),
+    value: 'simple'
+  }]
+}
