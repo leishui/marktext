@@ -219,12 +219,27 @@ export default {
       AUTO_PAIR_QUOTE_DES: '编写时自动关闭引号',
       FILE_REPRESENTATION: '文件内容呈现:',
       TAB_SIZE_DES: '首选标签页宽度',
-      END_OF_LINE_DES: '换行符种类',
+      END_OF_LINE_DES: '行结束符类型',
+      END_OF_LINE_OPTIONS: {
+        DEFAULT: '默认',
+        CRLF: '回车符加换行符 (CRLF)',
+        LF: '换行符 (LF)'
+      },
       DEFAULT_ENCODING_DES: '默认编码',
       AUTO_GUESS_ENCODING_DES: '自动判断文件编码',
       TRIM_TRAILING_NEW_LINE_DES: '处理尾部换行符',
+      TRIM_TRAILING_NEW_LINE_OPTIONS: {
+        TRIM_ALL_TRAILING: '删除所有尾部换行',
+        ENSURE_EXACTLY_ONE_TRAILING: '确保正好有一个尾部换行',
+        PRESERVE_STYLE_OF_ORIGINAL_DOCUMENT: '保留原始文档的换行风格',
+        DO_NOTHING: '不做任何处理'
+      },
       MISC: '杂项:',
       TEXT_DIRECTION_OPTIONS_DES: '文字方向',
+      TEXT_DIRECTION_OPTIONS: {
+        LTR: '从左到右',
+        RTL: '从右到左'
+      },
       HIDE_QUICK_INSERT_HINT_DES: '隐藏新增段落时选择类型的提示',
       HIDE_LINK_POPUP_DES: '隐藏鼠标置于链接上时的弹窗',
       AUTO_CHECK_DES: '是否自动检查任何相关任务'

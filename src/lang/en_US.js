@@ -216,11 +216,26 @@ export default {
       FILE_REPRESENTATION: 'File representation:',
       TAB_SIZE_DES: 'Preferred tab width',
       END_OF_LINE_DES: 'Line separator type',
+      END_OF_LINE_OPTIONS: {
+        DEFAULT: 'Default',
+        CRLF: 'Carriage return and line feed (CRLF)',
+        LF: 'Line feed (LF)'
+      },
       DEFAULT_ENCODING_DES: 'Default encoding',
       AUTO_GUESS_ENCODING_DES: 'Automatically detect file encoding',
       TRIM_TRAILING_NEW_LINE_DES: 'Handling of trailing newline characters',
+      TRIM_TRAILING_NEW_LINE_OPTIONS: {
+        TRIM_ALL_TRAILING: 'Trim all trailing',
+        ENSURE_EXACTLY_ONE_TRAILING: 'Ensure exactly one trailing',
+        PRESERVE_STYLE_OF_ORIGINAL_DOCUMENT: 'Preserve style of original document',
+        DO_NOTHING: 'Do nothing'
+      },
       MISC: 'Misc:',
       TEXT_DIRECTION_OPTIONS_DES: 'Text direction',
+      TEXT_DIRECTION_OPTIONS: {
+        LTR: 'Left to Right',
+        RTL: 'Right to Left'
+      },
       HIDE_QUICK_INSERT_HINT_DES: 'Hide hint for selecting type of new paragraph',
       HIDE_LINK_POPUP_DES: 'Hide popup when cursor is over link',
       AUTO_CHECK_DES: 'Whether to automatically check any related tasks'

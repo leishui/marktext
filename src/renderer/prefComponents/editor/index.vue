@@ -175,11 +175,13 @@ import Separator from '../common/separator'
 import TextBox from '../common/textBox'
 import {
   tabSizeOptions,
-  endOfLineOptions,
-  textDirectionOptions,
-  trimTrailingNewlineOptions,
+  getEndOfLineOptions,
+  getTextDirectionOptions,
+  getTrimTrailingNewlineOptions,
   getDefaultEncodingOptions
 } from './config'
+import { changeLanguage } from '../../../lang'
+import { ipcRenderer } from 'electron'
 
 export default {
   components: {
@@ -193,9 +195,9 @@ export default {
   },
   data () {
     this.tabSizeOptions = tabSizeOptions
-    this.endOfLineOptions = endOfLineOptions
-    this.textDirectionOptions = textDirectionOptions
-    this.trimTrailingNewlineOptions = trimTrailingNewlineOptions
+    this.endOfLineOptions = getEndOfLineOptions()
+    this.textDirectionOptions = getTextDirectionOptions()
+    this.trimTrailingNewlineOptions = getTrimTrailingNewlineOptions()
     this.defaultEncodingOptions = getDefaultEncodingOptions()
     return {}
   },
@@ -226,7 +228,18 @@ export default {
   methods: {
     onSelectChange (type, value) {
       this.$store.dispatch('SET_SINGLE_PREFERENCE', { type, value })
+    },
+    onUserPreferenceChanged (e, preferences) {
+      if (preferences.language) {
+        changeLanguage(preferences.language)
+        this.endOfLineOptions = getEndOfLineOptions()
+        this.textDirectionOptions = getTextDirectionOptions()
+        this.trimTrailingNewlineOptions = getTrimTrailingNewlineOptions()
+      }
     }
+  },
+  mounted () {
+    ipcRenderer.on('mt::user-preference', this.onUserPreferenceChanged)
   }
 }
 </script>
