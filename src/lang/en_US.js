@@ -302,6 +302,11 @@ export default {
     image: {
       IMAGE: 'Image',
       IMAGE_INSERT_ACTION: 'Default action after an image is inserted from local folder or clipboard',
+      IMAGE_ACTIONS: {
+        UPLOAD: 'Upload image to cloud using selected uploader (must be configured below)',
+        FOLDER: 'Copy image to designated relative assets or global local folder',
+        PATH: 'Keep original location'
+      },
       IMAGE_INSERT_ACTION_TOOLTIP: 'Clipboard handling is only fully supported on macOS and Windows.',
       IMAGE_FOLD_PATH: 'Global or relative image folder',
       IMAGE_FOLD_PATH_DES: 'Global image folder',

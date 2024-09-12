@@ -306,6 +306,11 @@ export default {
     image: {
       IMAGE: '图片',
       IMAGE_INSERT_ACTION: '从本地文件夹或剪贴板插入图像后的默认操作',
+      IMAGE_ACTIONS: {
+        UPLOAD: '使用选定的上传工具将图片上传至云端（需在下方配置）',
+        FOLDER: '将图片复制到指定的相对资源文件夹或全局本地文件夹',
+        PATH: '保留原始位置'
+      },
       IMAGE_INSERT_ACTION_TOOLTIP: '剪贴板处理仅在 macOS 和 Windows 上完全支持.',
       IMAGE_FOLD_PATH: '图片存放的绝对路径或相对路径',
       IMAGE_FOLD_PATH_DES: '图片存放的绝对路径',

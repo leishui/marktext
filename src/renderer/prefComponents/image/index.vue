@@ -23,7 +23,9 @@ import Separator from '../common/separator'
 import Uploader from './components/uploader'
 import CurSelect from '@/prefComponents/common/select'
 import FolderSetting from './components/folderSetting'
-import { imageActions } from './config'
+import { getImageActions } from './config'
+import { changeLanguage } from '../../../lang'
+import { ipcRenderer } from 'electron'
 
 export default {
   components: {
@@ -33,7 +35,7 @@ export default {
     Uploader
   },
   data () {
-    this.imageActions = imageActions
+    this.imageActions = getImageActions()
 
     return {}
   },
@@ -47,7 +49,16 @@ export default {
   methods: {
     onSelectChange (type, value) {
       this.$store.dispatch('SET_SINGLE_PREFERENCE', { type, value })
+    },
+    onUserPreferenceChanged (e, preferences) {
+      if (preferences.language) {
+        changeLanguage(preferences.language)
+        this.imageActions = getImageActions()
+      }
     }
+  },
+  mounted () {
+    ipcRenderer.on('mt::user-preference', this.onUserPreferenceChanged)
   }
 }
 </script>
