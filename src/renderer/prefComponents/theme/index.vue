@@ -34,10 +34,12 @@
 <script>
 import { mapState } from 'vuex'
 import themeMd from './theme.md'
-import { autoSwitchThemeOptions, themes } from './config'
+import { getAutoSwitchThemeOptions, themes } from './config'
 import markdownToHtml from '@/util/markdownToHtml'
 import CurSelect from '../common/select'
 import Separator from '../common/separator'
+import { changeLanguage } from '../../../lang'
+import { ipcRenderer } from 'electron'
 
 export default {
   components: {
@@ -45,7 +47,7 @@ export default {
     Separator
   },
   data () {
-    this.autoSwitchThemeOptions = autoSwitchThemeOptions
+    this.autoSwitchThemeOptions = getAutoSwitchThemeOptions()
     return {
       themes: []
     }
@@ -73,7 +75,16 @@ export default {
   methods: {
     onSelectChange (type, value) {
       this.$store.dispatch('SET_SINGLE_PREFERENCE', { type, value })
+    },
+    onUserPreferenceChanged (e, preferences) {
+      if (preferences.language) {
+        changeLanguage(preferences.language)
+        this.autoSwitchThemeOptions = getAutoSwitchThemeOptions()
+      }
     }
+  },
+  mounted () {
+    ipcRenderer.on('mt::user-preference', this.onUserPreferenceChanged)
   }
 }
 </script>

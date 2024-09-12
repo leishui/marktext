@@ -1,3 +1,5 @@
+import { i18n } from '../../../lang'
+
 export const themes = [
   {
     name: 'light'
@@ -19,13 +21,15 @@ export const themes = [
   }
 ]
 
-export const autoSwitchThemeOptions = [{
-  label: 'Adjust theme at startup', // Always
-  value: 0
-}, /* {
+export function getAutoSwitchThemeOptions () {
+  return [{
+    label: i18n.t('prefComponents.theme.AUTO_SWITCH_THEME_OPTIONS.ADJUST_THEME_AT_STARTUP'), // Always
+    value: 0
+  }, /* {
   label: 'Only at runtime',
   value: 1
 }, */ {
-  label: 'Never',
-  value: 2
-}]
+    label: i18n.t('prefComponents.theme.AUTO_SWITCH_THEME_OPTIONS.NEVER'),
+    value: 2
+  }]
+}

@@ -263,6 +263,10 @@ export default {
     theme: {
       THEME: '主题',
       AUTO_SWITCH_THEME_DES: '跟随系统设置自动调整主题',
+      AUTO_SWITCH_THEME_OPTIONS: {
+        ADJUST_THEME_AT_STARTUP: '软件启动时自动调整',
+        NEVER: '从不'
+      },
       OPEN_THEME_FOLDER: '打开主题文件夹',
       OPEN_FOLDER: '打开文件夹',
       IMPORT_CUSTOM_THEME: '导入自定义主题',

@@ -259,6 +259,10 @@ export default {
     theme: {
       THEME: 'Theme',
       AUTO_SWITCH_THEME_DES: 'Automatically adjust application theme according to system settings',
+      AUTO_SWITCH_THEME_OPTIONS: {
+        ADJUST_THEME_AT_STARTUP: 'Adjust theme at startup',
+        NEVER: 'Never'
+      },
       OPEN_THEME_FOLDER: 'Open the themes folder',
       OPEN_FOLDER: 'Open Folder',
       IMPORT_CUSTOM_THEME: 'Import custom themes',
