@@ -341,6 +341,15 @@ export default {
       SHORT_C: 'C',
       SHORT_P: 'P',
       SHORT_A: 'A'
+    },
+    sideBar: {
+      tree: {
+        OPENED_FILES: 'Opened files',
+        SAVE_ALL: 'Save All',
+        CLOSE_ALL: 'Close All',
+        CREATE_FILE: 'Create File',
+        OPEN_FOLDER: 'Open Folder'
+      }
     }
   },
   muya: {

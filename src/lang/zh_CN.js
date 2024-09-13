@@ -345,6 +345,15 @@ export default {
       SHORT_C: '字',
       SHORT_P: '段',
       SHORT_A: '符'
+    },
+    sideBar: {
+      tree: {
+        OPENED_FILES: '已打开的文件',
+        SAVE_ALL: '保存所有',
+        CLOSE_ALL: '关闭所有',
+        CREATE_FILE: '创建文件',
+        OPEN_FOLDER: '打开文件夹'
+      }
     }
   },
   muya: {

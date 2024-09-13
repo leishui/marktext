@@ -10,13 +10,13 @@
         <svg class="icon icon-arrow" :class="{'fold': !showOpenedFiles}" aria-hidden="true" @click.stop="toggleOpenedFiles()">
           <use xlink:href="#icon-arrow"></use>
         </svg>
-        <span class="default-cursor text-overflow" @click.stop="toggleOpenedFiles()">Opened files</span>
-        <a href="javascript:;" @click.stop="saveAll(false)" title="Save All">
+        <span class="default-cursor text-overflow" @click.stop="toggleOpenedFiles()">{{ $t('components.sideBar.tree.OPENED_FILES') }}</span>
+        <a href="javascript:;" @click.stop="saveAll(false)" :title="$t('components.sideBar.tree.SAVE_ALL')">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-save-all"></use>
           </svg>
         </a>
-        <a href="javascript:;" @click.stop="saveAll(true)" title="Close All">
+        <a href="javascript:;" @click.stop="saveAll(true)" :title="$t('components.sideBar.tree.CLOSE_ALL')">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-close-all"></use>
           </svg>
@@ -63,7 +63,7 @@
         ></file>
         <div class="empty-project" v-if="projectTree.files.length === 0 && projectTree.folders.length === 0">
           <span>Empty project</span>
-          <a href="javascript:;" @click.stop="createFile">Create File</a>
+          <a href="javascript:;" @click.stop="createFile">{{ $t('components.sideBar.tree.CREATE_FILE') }}</a>
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@
           <use :xlink:href="FolderIcon.url"></use>
         </svg>
         <button class="button-primary" @click="openFolder">
-          Open Folder
+          {{ $t('components.sideBar.tree.OPEN_FOLDER') }}
         </button>
       </div>
     </div>
