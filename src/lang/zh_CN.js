@@ -350,6 +350,9 @@ export default {
       NEW_FILE: '新建文件'
     },
     sideBar: {
+      toc: {
+        TABLE_OF_CONTENT: '大纲'
+      },
       tree: {
         OPENED_FILES: '已打开的文件',
         SAVE_ALL: '保存所有',

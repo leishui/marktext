@@ -346,6 +346,9 @@ export default {
       NEW_FILE: 'New File'
     },
     sideBar: {
+      toc: {
+        TABLE_OF_CONTENT: 'Table Of Contents'
+      },
       tree: {
         OPENED_FILES: 'Opened files',
         SAVE_ALL: 'Save All',
