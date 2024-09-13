@@ -342,6 +342,9 @@ export default {
       SHORT_P: 'P',
       SHORT_A: 'A'
     },
+    recent: {
+      NEW_FILE: 'New File'
+    },
     sideBar: {
       tree: {
         OPENED_FILES: 'Opened files',

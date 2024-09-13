@@ -346,6 +346,9 @@ export default {
       SHORT_P: '段',
       SHORT_A: '符'
     },
+    recent: {
+      NEW_FILE: '新建文件'
+    },
     sideBar: {
       tree: {
         OPENED_FILES: '已打开的文件',
