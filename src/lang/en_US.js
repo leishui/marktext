@@ -346,6 +346,16 @@ export default {
       NEW_FILE: 'New File'
     },
     sideBar: {
+      search: {
+        SEARCH_IN_FOLDER: 'Search in folder...',
+        CASE_SENSITIVE: 'Case Sensitive',
+        SELECT_WHOLE_WORD: 'Select whole word',
+        USE_QUERY_AS_REGEX: 'Use query as RegEx',
+        NO_FOLDER_OPEN: 'No folder open',
+        NO_RESULTS_FOUND: 'No results found.',
+        CANCEL: 'Cancel',
+        OPEN_FOLDER: 'Open Folder'
+      },
       toc: {
         TABLE_OF_CONTENT: 'Table Of Contents'
       },

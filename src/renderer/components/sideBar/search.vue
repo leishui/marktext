@@ -5,12 +5,12 @@
       <div class="search-wrapper">
         <input
           type="text" v-model="keyword"
-          placeholder="Search in folder..."
+          :placeholder="$t('components.sideBar.search.SEARCH_IN_FOLDER')"
           @keyup="search"
         >
         <div class="controls">
           <span
-            title="Case Sensitive"
+            :title="$t('components.sideBar.search.CASE_SENSITIVE')"
             class="is-case-sensitive"
             :class="{'active': isCaseSensitive}"
             @click.stop="caseSensitiveClicked()"
@@ -20,7 +20,7 @@
             </svg>
           </span>
           <span
-            title="Select whole word"
+            :title="$t('components.sideBar.search.SELECT_WHOLE_WORD')"
             class="is-whole-word"
             :class="{'active': isWholeWord}"
             @click.stop="wholeWordClicked()"
@@ -30,7 +30,7 @@
             </svg>
           </span>
           <span
-            title="Use query as RegEx"
+            :title="$t('components.sideBar.search.USE_QUERY_AS_REGEX')"
             class="is-regex"
             :class="{'active': isRegexp}"
             @click.stop="regexpClicked()"
@@ -43,9 +43,11 @@
       </div>
 
       <div class="search-message-section" v-if="showNoFolderOpenedMessage">
-        <span>No folder open</span>
+        <span>{{ $t('components.sideBar.search.NO_FOLDER_OPEN') }}</span>
       </div>
-      <div class="search-message-section" v-if="showNoResultFoundMessage">No results found.</div>
+      <div class="search-message-section" v-if="showNoResultFoundMessage">
+        {{ $t('components.sideBar.search.NO_RESULTS_FOUND') }}
+      </div>
       <div class="search-message-section" v-if="searchErrorString">{{ searchErrorString }}</div>
 
       <div
@@ -57,7 +59,7 @@
           size="mini"
           @click="cancelSearcher"
         >
-          Cancel <i class="el-icon-video-pause"></i>
+          {{ $t('components.sideBar.search.CANCEL') }} <i class="el-icon-video-pause"></i>
         </el-button>
       </div>
       <div v-if="searchResult.length" class="search-result-info">{{searchResultInfo}}</div>
@@ -78,7 +80,7 @@
             v-if="showNoFolderOpenedMessage"
             @click="openFolder"
           >
-            Open Folder
+            {{ $t('components.sideBar.search.OPEN_FOLDER') }}
           </button>
         </div>
       </div>

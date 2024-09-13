@@ -350,6 +350,16 @@ export default {
       NEW_FILE: '新建文件'
     },
     sideBar: {
+      search: {
+        SEARCH_IN_FOLDER: '在文件夹中搜索...',
+        CASE_SENSITIVE: '区分大小写',
+        SELECT_WHOLE_WORD: '整词匹配',
+        USE_QUERY_AS_REGEX: '使用正则表达式',
+        NO_FOLDER_OPEN: '未打开任何文件夹',
+        NO_RESULTS_FOUND: '未搜到任何结果.',
+        CANCEL: '取消',
+        OPEN_FOLDER: '打开文件夹'
+      },
       toc: {
         TABLE_OF_CONTENT: '大纲'
       },
