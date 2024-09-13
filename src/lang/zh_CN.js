@@ -406,6 +406,11 @@ export default {
         MERMAID: 'Mermaid 图表',
         MERMAID_SUB: '使用 mermaid 渲染的图表.'
       }
+    },
+    hints: {
+      editor: {
+        TYPE_AT_TO_INSERT: '输入 @ 来插入内容'
+      }
     }
   }
 }

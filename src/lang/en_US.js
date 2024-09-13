@@ -402,6 +402,11 @@ export default {
         MERMAID: 'Mermaid',
         MERMAID_SUB: 'Render Diagram by mermaid.'
       }
+    },
+    hints: {
+      editor: {
+        TYPE_AT_TO_INSERT: 'Type @ to insert'
+      }
     }
   }
 }

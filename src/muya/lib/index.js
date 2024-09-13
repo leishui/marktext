@@ -12,6 +12,8 @@ import ExportMarkdown from './utils/exportMarkdown'
 import ExportHtml from './utils/exportHtml'
 import ToolTip from './ui/tooltip'
 import './assets/styles/index.css'
+import { changeLanguage, i18n } from '../../lang'
+import { ipcRenderer } from 'electron'
 
 class Muya {
   static plugins = []
@@ -62,6 +64,31 @@ class Muya {
     eventCenter.attachDOMEvent(container, 'blur', () => {
       eventCenter.dispatch('blur')
     })
+    this.initI18n()
+    ipcRenderer.on('mt::user-preference', this.onUserPreferenceChanged.bind(this))
+  }
+
+  onUserPreferenceChanged (e, preferences) {
+    if (preferences.language) {
+      changeLanguage(preferences.language)
+      this.initI18n()
+    }
+  }
+
+  /**
+   * Override CSS property "content:" for i18n via adding a new <style> element
+   */
+  initI18n () {
+    const cssOverride = `
+      div.ag-show-quick-insert-hint p.ag-paragraph.ag-active > span.ag-paragraph-content:first-of-type:empty::after {
+        content: '${i18n.t('muya.hints.editor.TYPE_AT_TO_INSERT')}';
+        color: var(--editorColor10);
+      }
+    `
+
+    const style = document.createElement('style')
+    style.appendChild(document.createTextNode(cssOverride))
+    document.getElementsByTagName('head')[0].appendChild(style)
   }
 
   mutationObserver () {
