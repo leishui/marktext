@@ -19,7 +19,7 @@ jobs:
       DISPLAY: ":99.0"
       MARKTEXT_IS_STABLE: 1
       MARKTEXT_EXIT_ON_ERROR: 1
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
     steps:
       - name: Check out Git repository
