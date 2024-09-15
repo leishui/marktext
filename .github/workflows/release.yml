@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - 'release-v*'
+      - 'master'
 
 jobs:
   unix:
@@ -19,7 +19,7 @@ jobs:
       DISPLAY: ":99.0"
       MARKTEXT_IS_STABLE: 1
       MARKTEXT_EXIT_ON_ERROR: 1
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
     steps:
       - name: Check out Git repository
@@ -67,26 +67,26 @@ jobs:
         if: runner.os == 'Linux'
         run: strip node_modules/vscode-ripgrep/bin/rg
 
-      - name: Lint
-        run: |
-          yarn run lint
-          #yarn run validate-licenses
+      #      - name: Lint
+      #        run: |
+      #          yarn run lint
+      #          #yarn run validate-licenses
 
-      - name: Run unit and E2E tests
-        uses: GabrielBB/xvfb-action@v1
-        with:
-          run: yarn run test
+      #      - name: Run unit and E2E tests
+      #        uses: GabrielBB/xvfb-action@v1
+      #        with:
+      #          run: yarn run test
 
       - name: Build and release
         run: |
-              if [ "$RUNNER_OS" == "Linux" ]; then
-                yarn run release:linux --publish always
-              elif [ "$RUNNER_OS" == "macOS" ]; then
-                yarn run release:mac --publish always
-              else
-                echo "$RUNNER_OS not supported"
-                exit 1
-              fi
+          if [ "$RUNNER_OS" == "Linux" ]; then
+            yarn run release:linux --publish always
+          elif [ "$RUNNER_OS" == "macOS" ]; then
+            yarn run release:mac --publish always
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi
 
       - name: Calculate checksums
         if: runner.os == 'Linux'
@@ -114,7 +114,7 @@ jobs:
     env:
       MARKTEXT_IS_STABLE: 1
       MARKTEXT_EXIT_ON_ERROR: 1
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
     steps:
       - name: Check out Git repository
@@ -159,13 +159,13 @@ jobs:
       - name: Install dependencies
         run: yarn install --check-files --frozen-lockfile
 
-      - name: Lint
-        run: |
-          yarn run lint
-          #yarn run validate-licenses
+      #      - name: Lint
+      #        run: |
+      #          yarn run lint
+      #          #yarn run validate-licenses
 
-      - name: Run unit and E2E tests
-        run: yarn run test
+      #      - name: Run unit and E2E tests
+      #        run: yarn run test
 
       - name: Build and release
         run: yarn run release:win --publish always

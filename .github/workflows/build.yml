@@ -2,11 +2,11 @@ name: Build
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ develop ]
     paths-ignore:
       - 'docs/**'
   pull_request:
-    branches: [ main, develop ]
+    branches: [ develop ]
     paths-ignore:
       - 'docs/**'
 
