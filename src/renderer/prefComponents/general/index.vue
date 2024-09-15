@@ -93,7 +93,7 @@
               Hide "lastState" for now (#2064).
             <el-radio class="ag-underdevelop" label="lastState">Restore last editor session</el-radio>
             -->
-            <el-radio label="folder" style="margin-bottom: 10px;">{{ $t('prefComponents.general.OPEN_DEFAULT_DIR') }}</el-radio>
+            <el-radio label="folder" style="margin-bottom: 10px;">{{ $t('prefComponents.general.DEFAULT_DIRECTORY_TO_OPEN') }}</el-radio>
             <el-button size="small" @click="selectDefaultDirectoryToOpen">{{ $t('prefComponents.general.SELECT_FOLDER') }}</el-button>
             <el-radio label="blank">{{ $t('prefComponents.general.OPEN_A_BLANK_PAGE') }}</el-radio>
           </el-radio-group>
