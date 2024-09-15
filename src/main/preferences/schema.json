@@ -225,6 +225,11 @@
     "type": "boolean",
     "default": false
   },
+  "tabSize": {
+    "description": "Editor--Replace the tab with x spaces",
+    "type": "number",
+    "default": 4
+  },
   "preferLooseListItem": {
     "description": "Markdown--The preferred list type",
     "type": "boolean",
@@ -254,11 +259,6 @@
       "setext"
     ],
     "default": "atx"
-  },
-  "tabSize": {
-    "description": "Markdown--Replace the tab with x spaces",
-    "type": "number",
-    "default": 4
   },
   "listIndentation": {
     "description": "Markdown--Select the indent of list",
