@@ -370,6 +370,18 @@ export default {
   },
   muya: {
     ui: {
+      formatPicker: {
+        BOLD: 'Bold',
+        ITALIC: 'Italic',
+        UNDERLINE: 'Underline',
+        STRIKETHROUGH: 'Strikethrough',
+        HIGHLIGHT: 'Highlight',
+        INLINE_CODE: 'Inline Code',
+        INLINE_MATH: 'Inline Math',
+        LINK: 'Link',
+        IMAGE: 'Image',
+        CLEAR_FORMATTING: 'Clear Formatting'
+      },
       frontMenu: {
         DUPLICATE: 'Duplicate',
         TURN_INTO: 'Turn Into',

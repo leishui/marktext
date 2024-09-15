@@ -374,6 +374,18 @@ export default {
   },
   muya: {
     ui: {
+      formatPicker: {
+        BOLD: '粗体',
+        ITALIC: '斜体',
+        UNDERLINE: '下划线',
+        STRIKETHROUGH: '删除线',
+        HIGHLIGHT: '高亮',
+        INLINE_CODE: '行内代码',
+        INLINE_MATH: '行内数学公式',
+        LINK: '链接',
+        IMAGE: '图片',
+        CLEAR_FORMATTING: '清除格式'
+      },
       frontMenu: {
         DUPLICATE: '重复',
         TURN_INTO: '转换为',

@@ -9,61 +9,64 @@ import strikeIcon from '../../assets/pngicon/format_strike/2.png'
 import mathIcon from '../../assets/pngicon/format_math/2.png'
 import highlightIcon from '../../assets/pngicon/highlight/2.png'
 import clearIcon from '../../assets/pngicon/format_clear/2.png'
+import { i18n } from '../../../../lang'
 
 const COMMAND_KEY = isOsx ? '⌘' : 'Ctrl'
 
-const icons = [
-  {
-    type: 'strong',
-    tooltip: 'Bold',
-    shortcut: `${COMMAND_KEY}+B`,
-    icon: strongIcon
-  }, {
-    type: 'em',
-    tooltip: 'Italic',
-    shortcut: `${COMMAND_KEY}+I`,
-    icon: emphasisIcon
-  }, {
-    type: 'u',
-    tooltip: 'Underline',
-    shortcut: `${COMMAND_KEY}+U`,
-    icon: underlineIcon
-  }, {
-    type: 'del',
-    tooltip: 'Strikethrough',
-    shortcut: `${COMMAND_KEY}+D`,
-    icon: strikeIcon
-  }, {
-    type: 'mark',
-    tooltip: 'Highlight',
-    shortcut: `⇧+${COMMAND_KEY}+H`,
-    icon: highlightIcon
-  }, {
-    type: 'inline_code',
-    tooltip: 'Inline Code',
-    shortcut: `${COMMAND_KEY}+\``,
-    icon: codeIcon
-  }, {
-    type: 'inline_math',
-    tooltip: 'Inline Math',
-    shortcut: `⇧+${COMMAND_KEY}+M`,
-    icon: mathIcon
-  }, {
-    type: 'link',
-    tooltip: 'Link',
-    shortcut: `${COMMAND_KEY}+L`,
-    icon: linkIcon
-  }, {
-    type: 'image',
-    tooltip: 'Image',
-    shortcut: `⇧+${COMMAND_KEY}+I`,
-    icon: imageIcon
-  }, {
-    type: 'clear',
-    tooltip: 'Clear Formatting',
-    shortcut: `⇧+${COMMAND_KEY}+R`,
-    icon: clearIcon
-  }
-]
+function getIcons () {
+  return [
+    {
+      type: 'strong',
+      tooltip: i18n.t('muya.ui.formatPicker.BOLD'),
+      shortcut: `${COMMAND_KEY}+B`,
+      icon: strongIcon
+    }, {
+      type: 'em',
+      tooltip: i18n.t('muya.ui.formatPicker.ITALIC'),
+      shortcut: `${COMMAND_KEY}+I`,
+      icon: emphasisIcon
+    }, {
+      type: 'u',
+      tooltip: i18n.t('muya.ui.formatPicker.UNDERLINE'),
+      shortcut: `${COMMAND_KEY}+U`,
+      icon: underlineIcon
+    }, {
+      type: 'del',
+      tooltip: i18n.t('muya.ui.formatPicker.STRIKETHROUGH'),
+      shortcut: `${COMMAND_KEY}+D`,
+      icon: strikeIcon
+    }, {
+      type: 'mark',
+      tooltip: i18n.t('muya.ui.formatPicker.HIGHLIGHT'),
+      shortcut: `⇧+${COMMAND_KEY}+H`,
+      icon: highlightIcon
+    }, {
+      type: 'inline_code',
+      tooltip: i18n.t('muya.ui.formatPicker.INLINE_CODE'),
+      shortcut: `${COMMAND_KEY}+\``,
+      icon: codeIcon
+    }, {
+      type: 'inline_math',
+      tooltip: i18n.t('muya.ui.formatPicker.INLINE_MATH'),
+      shortcut: `⇧+${COMMAND_KEY}+M`,
+      icon: mathIcon
+    }, {
+      type: 'link',
+      tooltip: i18n.t('muya.ui.formatPicker.LINK'),
+      shortcut: `${COMMAND_KEY}+L`,
+      icon: linkIcon
+    }, {
+      type: 'image',
+      tooltip: i18n.t('muya.ui.formatPicker.IMAGE'),
+      shortcut: `⇧+${COMMAND_KEY}+I`,
+      icon: imageIcon
+    }, {
+      type: 'clear',
+      tooltip: i18n.t('muya.ui.formatPicker.CLEAR_FORMATTING'),
+      shortcut: `⇧+${COMMAND_KEY}+R`,
+      icon: clearIcon
+    }
+  ]
+}
 
-export default icons
+export default getIcons
