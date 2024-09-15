@@ -8,6 +8,7 @@
         :fetch-suggestions="querySearch"
         :placeholder="$t('prefComponents.sideBar.SEARCH_PREFERENCES')"
         :trigger-on-focus="false"
+        ref="autocompleteRef"
         @select="handleSelect">
         <i
           class="el-icon-search el-input__icon"
@@ -15,8 +16,8 @@
         >
         </i>
         <template slot-scope="{ item }">
-          <div class="name">{{ item.category }}</div>
-          <span class="addr">{{ item.preference }}</span>
+          <div class="name">{{ $t(`preferencesForSearch.${item.category}.${item.category}`) }}</div>
+          <span class="addr">{{ $t(`preferencesForSearch.${item.category}.${item.preferenceKey}`) }}</span>
         </template>
       </el-autocomplete>
     </section>
@@ -36,7 +37,7 @@
 <script>
 import { ipcRenderer } from 'electron'
 import { getCategory, searchContent } from './config'
-import { changeLanguage } from '../../../lang'
+import { changeLanguage, i18n } from '../../../lang'
 
 export default {
   data () {
@@ -63,8 +64,8 @@ export default {
     },
     createFilter (queryString) {
       return (restaurant) => {
-        return (restaurant.preference.toLowerCase().indexOf(queryString.toLowerCase()) >= 0) ||
-            (restaurant.category.toLowerCase().indexOf(queryString.toLowerCase()) >= 0)
+        return (i18n.t(`preferencesForSearch.${restaurant.category}.${restaurant.preferenceKey}`).toLowerCase().indexOf(queryString.toLowerCase()) >= 0) ||
+            (i18n.t(`preferencesForSearch.${restaurant.category}.${restaurant.category}`).toLowerCase().indexOf(queryString.toLowerCase()) >= 0)
       }
     },
     loadAll () {
@@ -93,6 +94,10 @@ export default {
     },
     onUserPreferenceChanged (e, preferences) {
       if (preferences.language) {
+        // clear input
+        this.state = ''
+        // clear suggestions
+        this.$refs.autocompleteRef.suggestions = []
         changeLanguage(preferences.language)
         this.category = getCategory()
       }

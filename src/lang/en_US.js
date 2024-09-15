@@ -190,7 +190,7 @@ export default {
         TITLE: 'Title'
       },
       START_UP_ACTION: 'Action on startup:',
-      OPEN_DEFAULT_DIR: 'Open the default directory',
+      DEFAULT_DIRECTORY_TO_OPEN: 'Open the default directory',
       SELECT_FOLDER: 'Select Folder',
       OPEN_A_BLANK_PAGE: 'Open a blank page',
       MISC: 'Misc:',
@@ -332,6 +332,95 @@ export default {
       DUMP_KEYBOARD_INFORMATION: 'Dump keyboard information'
     }
   },
+  preferencesForSearch: {
+    General: {
+      General: 'General Settings',
+      autoSave: 'Automatically save the content being edited.',
+      autoSaveDelay: 'The time in ms after a change that the file is saved.',
+      titleBarStyle: 'The title bar style (Windows and Linux system only).',
+      openFilesInNewWindow: 'Open files in a new window.',
+      openFolderInNewWindow: 'Open folder via menu in a new window.',
+      zoom: 'The zoom level. Between 0.5 and 2.0 inclusive.',
+      hideScrollbar: 'Whether to hide scrollbars.',
+      wordWrapInToc: 'Whether to enable word wrap in TOC.',
+      fileSortBy: 'Sort files in opened folder by created time, modified time, and title.',
+      startUpAction: 'The action after MarkText startup, open the last edited content, open the specified folder, or blank page.',
+      defaultDirectoryToOpen: 'The default directory that should be opened on startup when startUp=folder.',
+      language: 'The language MarkText uses.'
+    },
+    Editor: {
+      Editor: 'Editor',
+      editorFontFamily: 'Editor font family.',
+      fontSize: 'Font size in pixels.',
+      lineHeight: 'Line height.',
+      editorLineWidth: 'Defines the maximum editor area width. An empty string or suffixes of ch (characters), px (pixels), or % (percentage) are allowed.',
+      codeFontSize: 'Font size in code block, the range is 12 ~ 18.',
+      codeFontFamily: 'Font family used in code block.',
+      codeBlockLineNumbers: 'Whether to show the line numbers.',
+      trimUnnecessaryCodeBlockEmptyLines: 'Trim the beginning and ending empty lines in code block.',
+      autoPairBracket: 'Automatically pair brackets when editing.',
+      autoPairMarkdownSyntax: 'Autocomplete markdown syntax.',
+      autoPairQuote: 'Automatic completion of quotes.',
+      endOfLine: "The newline character used at the end of each line. The default value is default, which selects your operating system's default newline character.",
+      defaultEncoding: 'The default file encoding.',
+      autoGuessEncoding: 'Try to automatically guess the file encoding when opening files.',
+      trimTrailingNewline: 'The trim trailing newline option.',
+      textDirection: 'The writing text direction.',
+      hideQuickInsertHint: 'Hide hint for quickly creating paragraphs.',
+      hideLinkPopup: 'Hide link popup when the cursor hovers over the link.',
+      autoCheck: 'Whether to automatically check related tasks.',
+      tabSize: 'Replace the tab with x spaces.'
+    },
+    Markdown: {
+      Markdown: 'Markdown',
+      preferLooseListItem: 'The preferred list type.',
+      bulletListMarker: 'The marker used in bullet list.',
+      orderListDelimiter: 'The delimiter used in order list.',
+      preferHeadingStyle: 'The preferred heading style in MarkText.',
+      listIndentation: 'Select the indent of the list.',
+      frontmatterType: 'The frontmatter type.',
+      superSubScript: "Enable pandoc's markdown extension superscript and subscript.",
+      footnote: "Enable pandoc's markdown extension footnote.",
+      isHtmlEnabled: 'Enable HTML rendering.',
+      isGitlabCompatibilityEnabled: 'Enable GitLab compatibility mode.',
+      sequenceTheme: 'Sequence diagram theme.'
+    },
+    Theme: {
+      Theme: 'Theme',
+      theme: 'Select the theme used in MarkText.',
+      autoSwitchTheme: 'Automatically adjust the application theme according to the system.'
+    },
+    Spelling: {
+      Spelling: 'Spelling',
+      spellcheckerEnabled: 'Whether spell checking is enabled.',
+      spellcheckerNoUnderline: "Don't underline spelling mistakes.",
+      spellcheckerLanguage: 'The spell checker language.'
+    },
+    Image: {
+      Image: 'Image',
+      imageInsertAction: 'The default behavior after inserting an image from a local folder.',
+      imagePreferRelativeDirectory: 'Whether to prefer the relative image directory.',
+      imageRelativeDirectoryName: 'The relative image folder name.'
+    },
+    View: {
+      View: 'View',
+      sideBarVisibility: 'Whether the sidebar is visible.',
+      tabBarVisibility: 'Whether the tabs are shown.',
+      sourceCodeModeEnabled: 'Whether the source-code mode is enabled by default.'
+    },
+    Searcher: {
+      Searcher: 'Searcher',
+      searchExclusions: 'List of glob patterns to exclude from search.',
+      searchMaxFileSize: 'The maximal file size (<maxFileSize><suffix>). Suffixes of K, M, or G are allowed. If no suffix is given, the number is treated as bytes.',
+      searchIncludeHidden: 'Whether to search in hidden files and directories.',
+      searchNoIgnore: 'Whether to ignore ignore files like .gitignore.',
+      searchFollowSymlinks: 'Whether symlinks should be followed.'
+    },
+    Watcher: {
+      Watcher: 'Watcher',
+      watcherUsePolling: 'Whether to use polling. Polling may lead to high CPU utilization but is necessary to watch files over a network.'
+    }
+  },
   components: {
     titleBar: {
       WORDS: 'Words:',
@@ -370,6 +459,18 @@ export default {
   },
   muya: {
     ui: {
+      formatPicker: {
+        BOLD: 'Bold',
+        ITALIC: 'Italic',
+        UNDERLINE: 'Underline',
+        STRIKETHROUGH: 'Strikethrough',
+        HIGHLIGHT: 'Highlight',
+        INLINE_CODE: 'Inline Code',
+        INLINE_MATH: 'Inline Math',
+        LINK: 'Link',
+        IMAGE: 'Image',
+        CLEAR_FORMATTING: 'Clear Formatting'
+      },
       frontMenu: {
         DUPLICATE: 'Duplicate',
         TURN_INTO: 'Turn Into',

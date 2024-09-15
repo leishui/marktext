@@ -88,7 +88,7 @@ export default {
         HELP_CHANGE_LOG: '版本更新记录',
         HELP_DONATE_VIA_OPEN_COLLECTIVE: '通过 Open Collective 捐赠',
         HELP_FEEDBACK_VIA_TWITTER: '通过 Twitter 反馈',
-        HELP_REPORT_ISSUE_OR_REQUEST_FEATURE: '报告问题、申请新功能',
+        HELP_REPORT_ISSUE_OR_REQUEST_FEATURE: '报告问题,申请新功能',
         HELP_WEBSITE: '官网',
         HELP_WATCH_ON_GITHUB: '在 GitHub 上关注 Mark Text...',
         HELP_FOLLOW_US_ON_GITHUB: '在 GitHub 上关注我们...',
@@ -175,7 +175,7 @@ export default {
       AUTO_SAVE_DES: '自动保存延迟',
       AUTO_SAVE_DELAY_DES: '文档改变后多久触发自动保存',
       WINDOW: '窗口:',
-      TITLE_BAR_STYLE_DES: '标题栏风格',
+      TITLE_BAR_STYLE_DES: '标题栏样式',
       TITLE_BAR_STYLE_OPTIONS: {
         CUSTOM: '自定义的',
         NATIVE: '原生的'
@@ -186,7 +186,7 @@ export default {
       OPEN_FOLDERS_IN_NEW_WINDOW_DES: '在新的窗口打开文件夹',
       ZOOM_DES: '缩放',
       SIDE_BAR: '边栏',
-      WORD_WRAP_IN_TOC_DES: '在目录中自动换行',
+      WORD_WRAP_IN_TOC_DES: '在大纲中自动换行',
       FILE_SORT_BY_DES: '文件排序依据',
       FILE_SORT_BY_OPTIONS: {
         CREATE_TIME: '创建时间',
@@ -194,7 +194,7 @@ export default {
         TITLE: '文件名'
       },
       START_UP_ACTION: '启动时操作:',
-      OPEN_DEFAULT_DIR: '打开默认目录',
+      DEFAULT_DIRECTORY_TO_OPEN: '打开默认目录',
       SELECT_FOLDER: '选择文件夹',
       OPEN_A_BLANK_PAGE: '打开空页面',
       MISC: '杂项:',
@@ -207,7 +207,7 @@ export default {
       EDITOR_LINE_HEIGHT_DES: '文本编辑器行高',
       EDITOR_FONT_FAMILY_DES: '文本编辑器字体',
       EDITOR_LINE_WIDTH_DES: '文本编辑器最大宽度',
-      EDITOR_LINE_WIDTH_NOTES: '主题默认值为空，否则使用带单位后缀的数字，其中字符为\'ch\'，像素为\'px\'，百分比为\'%\'.',
+      EDITOR_LINE_WIDTH_NOTES: '主题默认值为空,否则使用带单位后缀的数字,其中字符为\'ch\',像素为\'px\',百分比为\'%\'.',
       CODE_BLOCK_SETTINGS: '代码块设置:',
       CODE_FONT_SIZE_DES: '代码块字体大小',
       CODE_FONT_FAMILY_DES: '代码块字体',
@@ -218,7 +218,7 @@ export default {
       AUTO_PAIR_MARKDOWN_SYNTAX_DES: '编写时自动补全 markdown 语法',
       AUTO_PAIR_QUOTE_DES: '编写时自动关闭引号',
       FILE_REPRESENTATION: '文件内容呈现:',
-      TAB_SIZE_DES: '首选标签页宽度',
+      TAB_SIZE_DES: '[TAB]键对应多少个空格',
       END_OF_LINE_DES: '行结束符类型',
       END_OF_LINE_OPTIONS: {
         DEFAULT: '默认',
@@ -286,7 +286,7 @@ export default {
       SPELL_CHECKER_NO_UNDERLINE_DES: '隐藏拼写错误的标识',
       AUTO_DETECT_DOCUMENT_LANGUAGE_DES: '自动识别文档语言',
       SPELL_CHECKER_LANGUAGE_DES: '拼写检查的默认语言',
-      SPELL_CHECKER_DES: '键入时将自动检测使用的语言。可以通过系统设置中的“语言和地区”添加其他语言。',
+      SPELL_CHECKER_DES: '键入时将自动检测使用的语言.可以通过系统设置中的“语言和地区”添加其他语言.',
       CUSTOM_DICTIONARY: '自定义词典:',
       CUSTOM_DICTIONARY_DES: '编辑自定义词典中的词.',
       NO_WORDS_AVAILABLE: '无有效自定义词'
@@ -305,9 +305,9 @@ export default {
     },
     image: {
       IMAGE: '图片',
-      IMAGE_INSERT_ACTION: '从本地文件夹或剪贴板插入图像后的默认操作',
+      IMAGE_INSERT_ACTION: '从本地文件夹或剪贴板插入图片后的默认操作',
       IMAGE_ACTIONS: {
-        UPLOAD: '使用选定的上传工具将图片上传至云端（需在下方配置）',
+        UPLOAD: '使用选定的上传工具将图片上传至云端(需在下方配置)',
         FOLDER: '将图片复制到指定的相对资源文件夹或全局本地文件夹',
         PATH: '保留原始位置'
       },
@@ -323,7 +323,7 @@ export default {
     },
     keybindings: {
       KEY_BINDINGS: '快捷键',
-      KEY_BINDINGS_DES: '自定义MarkText快捷键，然后单击下面的保存按钮以应用所有更改(需要重新启动). 可以在此找到所有可用和默认的快捷键绑定:',
+      KEY_BINDINGS_DES: '自定义MarkText快捷键,然后单击下面的保存按钮以应用所有更改(需要重新启动). 可以在此找到所有可用和默认的快捷键绑定:',
       KEYBINDING_LIST_DESCRIPTION: '描述',
       KEYBINDING_LIST_KEY_COMBINATION: '组合键',
       KEYBINDING_LIST_OPTIONS: '选项',
@@ -334,6 +334,95 @@ export default {
       RESTORE_DEFAULT_KEY_BINDING: '恢复默认',
       DEBUG_OPTIONS: '调试选项:',
       DUMP_KEYBOARD_INFORMATION: '导出快捷键信息'
+    }
+  },
+  preferencesForSearch: {
+    General: {
+      General: '通用设置',
+      autoSave: '自动保存正在编辑的内容.',
+      autoSaveDelay: '更改后保存文件的延迟时间(毫秒).',
+      titleBarStyle: '标题栏样式(仅适用于 Windows 和 Linux 系统).',
+      openFilesInNewWindow: '在新窗口中打开文件.',
+      openFolderInNewWindow: '通过菜单在新窗口中打开文件夹.',
+      zoom: '缩放级别,范围为 0.5 到 2.0(含).',
+      hideScrollbar: '是否隐藏滚动条.',
+      wordWrapInToc: '是否在目录中启用自动换行.',
+      fileSortBy: '根据创建时间,修改时间和标题对打开的文件夹中的文件进行排序.',
+      startUpAction: 'MarkText 启动后的操作,打开上次编辑的内容,指定文件夹或空白页.',
+      defaultDirectoryToOpen: '启动时打开的默认文件夹,当 startUp=folder 时适用.',
+      language: 'MarkText 使用的语言.'
+    },
+    Editor: {
+      Editor: '编辑器',
+      editorFontFamily: '编辑器的字体系列.',
+      fontSize: '字体大小(像素).',
+      lineHeight: '行高.',
+      editorLineWidth: '定义编辑器区域的最大宽度.允许的单位有字符(ch),像素(px)或百分比(%).',
+      codeFontSize: '代码块中的字体大小,范围为 12 ~ 18.',
+      codeFontFamily: '代码块中使用的字体系列.',
+      codeBlockLineNumbers: '是否显示行号.',
+      trimUnnecessaryCodeBlockEmptyLines: '修剪代码块中开头和结尾的空行.',
+      autoPairBracket: '编辑时自动补全括号.',
+      autoPairMarkdownSyntax: '自动补全 Markdown 语法.',
+      autoPairQuote: '自动补全引号.',
+      endOfLine: '每行末尾使用的换行符.默认值为“default”,即选择操作系统的默认换行符.',
+      defaultEncoding: '默认文件编码.',
+      autoGuessEncoding: '打开文件时自动猜测文件编码.',
+      trimTrailingNewline: '删除末尾多余的换行符选项.',
+      textDirection: '文字的书写方向.',
+      hideQuickInsertHint: '隐藏快速创建段落的提示.',
+      hideLinkPopup: '当光标悬停在链接上时隐藏链接弹出提示.',
+      autoCheck: '是否自动检查相关任务.',
+      tabSize: '[TAB]键对应多少个空格.'
+    },
+    Markdown: {
+      Markdown: 'Markdown',
+      preferLooseListItem: '首选的列表类型.',
+      bulletListMarker: '在项目符号列表中使用的标记.',
+      orderListDelimiter: '在有序列表中使用的分隔符.',
+      preferHeadingStyle: 'MarkText 中首选的标题样式.',
+      listIndentation: '选择列表的缩进.',
+      frontmatterType: '前言的类型.',
+      superSubScript: '启用 Pandoc 的 Markdown 扩展：上标和下标.',
+      footnote: '启用 Pandoc 的 Markdown 扩展：脚注.',
+      isHtmlEnabled: '启用 HTML 渲染.',
+      isGitlabCompatibilityEnabled: '启用 GitLab 兼容模式.',
+      sequenceTheme: '序列图的主题.'
+    },
+    Theme: {
+      Theme: '主题',
+      theme: '选择 MarkText 使用的主题.',
+      autoSwitchTheme: '根据系统自动调整应用主题.'
+    },
+    Spelling: {
+      Spelling: '拼写检查',
+      spellcheckerEnabled: '是否启用拼写检查.',
+      spellcheckerNoUnderline: '不为拼写错误加下划线.',
+      spellcheckerLanguage: '拼写检查器的语言.'
+    },
+    Image: {
+      Image: '图片',
+      imageInsertAction: '从本地文件夹插入图片后的默认行为.',
+      imagePreferRelativeDirectory: '是否优先使用相对图片目录.',
+      imageRelativeDirectoryName: '相对图片文件夹名称.'
+    },
+    View: {
+      View: '视图',
+      sideBarVisibility: '侧边栏是否可见.',
+      tabBarVisibility: '是否显示标签页.',
+      sourceCodeModeEnabled: '是否默认启用源码模式.'
+    },
+    Searcher: {
+      Searcher: '搜索器',
+      searchExclusions: '要从搜索中排除的 glob 模式列表.',
+      searchMaxFileSize: '最大文件大小(<maxFileSize><suffix>).允许的后缀有 K,M 或 G.如果没有后缀,则按字节处理.',
+      searchIncludeHidden: '是否搜索隐藏的文件和文件夹.',
+      searchNoIgnore: '是否忽略忽略文件(如 .gitignore).',
+      searchFollowSymlinks: '是否跟随符号链接.'
+    },
+    Watcher: {
+      Watcher: '监视器',
+      watcherUsePolling: '是否使用轮询.轮询可能导致高 CPU 使用率,但在通过网络监视文件时是必需的.'
     }
   },
   components: {
@@ -374,6 +463,18 @@ export default {
   },
   muya: {
     ui: {
+      formatPicker: {
+        BOLD: '粗体',
+        ITALIC: '斜体',
+        UNDERLINE: '下划线',
+        STRIKETHROUGH: '删除线',
+        HIGHLIGHT: '高亮',
+        INLINE_CODE: '行内代码',
+        INLINE_MATH: '行内数学公式',
+        LINK: '链接',
+        IMAGE: '图片',
+        CLEAR_FORMATTING: '清除格式'
+      },
       frontMenu: {
         DUPLICATE: '重复',
         TURN_INTO: '转换为',

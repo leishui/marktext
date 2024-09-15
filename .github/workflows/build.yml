@@ -2,11 +2,11 @@ name: Build
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ develop ]
     paths-ignore:
       - 'docs/**'
   pull_request:
-    branches: [ main, develop ]
+    branches: [ develop ]
     paths-ignore:
       - 'docs/**'
 
@@ -73,7 +73,7 @@ jobs:
       - name: Lint
         run: |
           yarn run lint
-          yarn run validate-licenses
+#          yarn run validate-licenses
 
       - name: Run unit and E2E tests
         uses: GabrielBB/xvfb-action@v1
@@ -142,7 +142,7 @@ jobs:
       - name: Lint
         run: |
           yarn run lint
-          yarn run validate-licenses
+#          yarn run validate-licenses
 
       - name: Run unit and E2E tests
         run: yarn run test

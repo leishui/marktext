@@ -1,7 +1,7 @@
 {
   "name": "marktext",
-  "version": "0.17.1",
-  "homepage": "https://github.com/marktext/marktext/",
+  "version": "0.0.1-test",
+  "homepage": "https://github.com/leishui/marktext/",
   "description": "Next generation markdown editor",
   "license": "MIT",
   "main": "./dist/electron/main.js",
@@ -183,7 +183,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:marktext/marktext.git"
+    "url": "git@github.com:leishui/marktext.git"
   },
   "bugs": {
     "url": "https://github.com/marktext/marktext/issues"
